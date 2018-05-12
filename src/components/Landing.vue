@@ -317,7 +317,9 @@ export default {
   .theme {
     font-size: 1.5rem;
     top: 40%;
+    left: unset;
     right: calc((100% - 270px) / 2);
+    text-align: right;
   }
 
   .theme__items{
@@ -334,6 +336,70 @@ export default {
     color: white;
     background: #ff7bac;
     font-size: 1.5rem;
+    padding: 0.5rem 2.5rem;
+    border-radius: 2.5rem;
+    text-decoration: none;
+  }
+}
+
+@media only screen and (min-device-width:768px) and (max-device-width:1024px) {
+  .canvas-small {
+    top: 25%;
+    left: calc((100% - 80vw) / 2);
+    left: 10vw;
+    width: 80vw;
+    height: 80vw;
+  }
+
+  .main-header {
+    padding: 1rem 0;
+  }
+
+  .icon svg {
+    width: 15vw;
+  }
+
+  .main-header {
+    padding: 2rem 1rem;
+  }
+
+  .nav__item{
+    margin: 0 1.2vw;
+  }
+
+  .nav__item a {
+    font-size: 2.8vw;
+  }
+
+  .main-logo {
+    position: absolute;
+    top: 40%;
+    left: calc((100% - 60vw) / 2);
+    width: 60vw;
+  }
+
+  .theme {
+    font-size: 6vw;
+    top: 45%;
+    left: unset;
+    right: calc((100% - 60vw) / 2);
+    text-align: right;
+  }
+
+  .theme__items{
+    font-size: 3.5vw;
+    top: 50%;
+    left: 0%;
+  }
+
+  .theme__item{
+    text-align: center;
+  }
+
+  .theme__item--register a {
+    color: white;
+    background: #ff7bac;
+    font-size: 5vw;
     padding: 0.5rem 2.5rem;
     border-radius: 2.5rem;
     text-decoration: none;
