@@ -15,6 +15,9 @@
               <a href="#">Prizes</a>
           </li>
           <li class="nav__item">
+              <a href="#">Sponsors</a>
+          </li>
+          <li class="nav__item">
               <a href="#">FAQs</a>
           </li>
           <li class="nav__item nav__item--register">
@@ -91,8 +94,8 @@ export default {
 
 .nav__item {
   display: inline-block;
-  margin: 0 2.5rem 0 2.5rem;
-  font-size: 1.3rem;
+  margin: 0 3rem 0 3rem;
+  font-size: 1.5rem;
   font-weight: bold;
   color: white;
 }
@@ -102,11 +105,10 @@ export default {
   color: white;
 }
 
-
 .nav__item--register a {
   color: white;
   background: #ff7bac;
-  padding: 0.5rem 1.5rem;
+  padding: 0.5rem 2rem;
   border-radius: 2.5rem;
 }
 
