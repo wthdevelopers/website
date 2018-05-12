@@ -2,7 +2,9 @@
 <div class="canvas">
 <div class="canvas-small"></div>
 <header class="main-header">
-  <div class="icon">WTH</div>
+  <div class="icon">
+    <Logo></Logo>
+  </div>
   <nav class="nav">
       <ul class="nav__items">
           <li class="nav__item">
@@ -26,7 +28,9 @@
       </ul>
   </nav>
 </header>
-<div class="main-logo"></div>
+<div class="main-logo">
+  <Logo></Logo>
+</div>
 <div class="theme">virtual // reality</div>
   <ul class="theme__items">
     <li class="theme__item">19 September - 20 September</li>
@@ -39,8 +43,13 @@
 </template>
 
 <script>
+import Logo from '@/components/WTH_logo.vue'
+
 export default {
-  name: 'Landing'
+  name: 'Landing',
+  components: {
+    'Logo':Logo 
+  }
 }
 </script>
 
@@ -67,22 +76,21 @@ export default {
 
 .main-header {
   padding: 1.8rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .icon {
-  display: inline-block;
   vertical-align: middle;
-  color: white;
-  text-decoration: none;
-  font-size: 1.5rem;
-  height: 1.5rem;
+  width: 150px;
+  margin: 0 1rem;
 }
 
 .nav {
-  display: inline-block;
+  display: flex;
   font-family: 'Nunito', sans-serif;
   text-align: right;
-  width: calc(100% - 4rem);
   vertical-align: middle;
 }
 
@@ -90,11 +98,12 @@ export default {
   margin: 0;
   padding: 0;
   list-style: none;
+  display: flex;
 }
 
 .nav__item {
-  display: inline-block;
-  margin: 0 3rem 0 3rem;
+  /* display: inline-block; */
+  margin: 0 1.3rem;
   font-size: 1.5rem;
   font-weight: bold;
   color: white;
@@ -119,7 +128,10 @@ export default {
 }
 
 .main-logo {
-  display: none;
+  position: relative;
+  top: 23%;
+  left: 14%;
+  width: 500px;
 }
 
 .theme {
@@ -128,8 +140,9 @@ export default {
   font-size: 3.2rem;
   font-weight: bolder;
   position: relative;
-  top: 43%;
+  top: 25%;
   left: 45%;
+  vertical-align: top;
 }
 
 .theme__items{
@@ -141,7 +154,7 @@ export default {
   font-weight: bold;
   color: white;
   position: relative;
-  top: 43%;
+  top: 25%;
   left: 45%;
 }
 
