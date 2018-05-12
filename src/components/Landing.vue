@@ -54,9 +54,9 @@ export default {
 .canvas-small {
   position: absolute;
   top: 20%;
-  left: 20%;
-  width: 60%;
-  height: 60%;
+  left: 30%;
+  width: 560px;
+  height: 560px;
   background: linear-gradient(-45deg, #ffa6c7 40%, #6eadff 60%);
   -webkit-mask-box-image: -webkit-radial-gradient(white 40%, transparent 70%);
   border-radius: 50%;
