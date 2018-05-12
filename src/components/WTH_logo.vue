@@ -19,14 +19,14 @@ export default {
 
 <style>
 .cls-1 {
-  fill:#f066a0;
+  fill:white;
 }
 
 .cls-2 {
-  fill:#39c5ee;
+  fill:white;
 }
 
 .cls-3 {
-  fill:#a76bac;
+  fill:white;
 }
 </style>
