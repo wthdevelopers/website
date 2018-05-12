@@ -23,6 +23,15 @@
       </ul>
   </nav>
 </header>
+<div class="main-logo"></div>
+<div class="theme">virtual // reality</div>
+  <ul class="theme__items">
+    <li class="theme__item">19 September - 20 September</li>
+    <li class="theme__item">Singapore University of Technology and Design</li>
+    <li class="theme__item theme__item--register">
+      <a href="#">Register</a>
+    </li>
+  </ul>
 </div>
 </template>
 
@@ -103,7 +112,58 @@ export default {
 
 .nav__item--register a:hover,
 .nav__item--register a:active {
-    color: #ff7bac;
-    background: white;
+  color: #ff7bac;
+  background: white;
+}
+
+.main-logo {
+  display: none;
+}
+
+.theme {
+  font-family: 'Nunito', sans-serif;
+  color: white;
+  font-size: 3.2rem;
+  font-weight: bolder;
+  position: relative;
+  top: 43%;
+  left: 45%;
+}
+
+.theme__items{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: 'Nunito', sans-serif;
+  font-size:1.5rem;
+  font-weight: bold;
+  color: white;
+  position: relative;
+  top: 43%;
+  left: 45%;
+}
+
+.theme__item{
+  display: block;
+  margin: 0.5rem 0rem; 
+}
+
+.theme__item--register {
+  margin: 2rem 0rem;
+}
+
+.theme__item--register a {
+  color: white;
+  background: #ff7bac;
+  font-size: 2.5rem;
+  padding: 0.5rem 3.5rem;
+  border-radius: 2.5rem;
+  text-decoration: none;
+}
+
+.theme__item--register a:hover,
+.theme__item--register a:active {
+  color: #ff7bac;
+  background: white;
 }
 </style>
