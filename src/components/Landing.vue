@@ -193,7 +193,7 @@ export default {
 .main-logo {
   position: relative;
   top: 23%;
-  left: 14%;
+  left: calc(50vw - 400px);
   width: 500px;
 }
 
@@ -204,7 +204,7 @@ export default {
   font-weight: bolder;
   position: relative;
   top: 25%;
-  left: 45%;
+  left: calc(50vw - 40px);
   vertical-align: top;
 }
 
@@ -218,7 +218,7 @@ export default {
   color: white;
   position: relative;
   top: 25%;
-  left: 45%;
+  left: calc(50vw - 40px);
 }
 
 .theme__item{
