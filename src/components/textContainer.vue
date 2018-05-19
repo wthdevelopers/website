@@ -1,9 +1,7 @@
 <template>
-    <div>
-        <div class="text__container" :style="mobileStyles">
-            <div class="text__container--title">{{ title }}</div>
-            <div id="test" class="text__container--content" :style="desktopStyles">{{ content }}</div>
-        </div>
+    <div class="text__container" :style="mobileStyles">
+        <div class="text__container--title">{{ title }}</div>
+        <div id="test" class="text__container--content" :style="desktopStyles">{{ content }}</div>
     </div>
 </template>
 
