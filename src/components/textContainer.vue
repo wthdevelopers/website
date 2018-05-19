@@ -47,7 +47,7 @@ export default {
 }
 
 .text__container--title{
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Quicksand', sans-serif;
     font-size: 3rem;
     text-align: center;
     color: #ff7bac;
