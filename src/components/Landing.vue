@@ -84,9 +84,12 @@ export default {
 @import url("https://fonts.googleapis.com/css?family=Nunito");
 
 .canvas {
-  width: inherit;
+  width: 100vw;
   background: linear-gradient(135deg,#ffa6c7 40%, #6eadff 90%);
-  height: inherit;
+  height: 100vh;
+  position: relative;
+  top: 0;
+  left: 0;
 }
 
 .canvas-small {
@@ -308,15 +311,14 @@ export default {
   }
 
   .main-logo {
-    position: absolute;
-    top: 38%;
+    top: 30%;
     left: calc((100% - 270px) / 2);
     width: 270px;
   }
 
   .theme {
     font-size: 1.5rem;
-    top: 40%;
+    top: 30%;
     left: unset;
     right: calc((100% - 270px) / 2);
     text-align: right;
@@ -324,7 +326,7 @@ export default {
 
   .theme__items{
     font-size: 1rem;
-    top: 50%;
+    top: 35%;
     left: 0%;
   }
 
@@ -372,7 +374,6 @@ export default {
   }
 
   .main-logo {
-    position: absolute;
     top: 40%;
     left: calc((100% - 60vw) / 2);
     width: 60vw;
