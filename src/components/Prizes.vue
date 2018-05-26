@@ -30,7 +30,7 @@
                 </li>
             </ul>
         </div>
-        </section>
+      </section>
 </template>
 
 <script>
@@ -44,7 +44,9 @@ export default {
 
 @import url("https://fonts.googleapis.com/css?family=Quicksand:700");
 @import url("https://fonts.googleapis.com/css?family=Nunito");
-
+section{
+  padding:30px;
+}
 .prizes {
     margin: 2rem 0;
 }
@@ -116,24 +118,24 @@ export default {
 
     .prize__list {
         display: block;
-        width: 100%; 
+        width: 100%;
     }
 
     .prize {
         width: 100%;
         margin: auto;
     }
-    
+
     .prize__image {
         height: 128px;
-        width: 128px;   
+        width: 128px;
     }
-    
+
     .prize-category {
         font-size: 1rem;
         margin: 0.5rem 0;
     }
-    
+
     .prize-amount {
         font-size: 1rem;
     }
