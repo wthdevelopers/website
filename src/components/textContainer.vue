@@ -13,7 +13,7 @@ export default {
         mobileStyles: function() {
             if (window.screen.width >= 320 && window.screen.width <= 480) {
                 return {
-                    'background-color': this.bkColor, 
+                    'background-color': this.bkColor,
                     'box-shadow': '-0.3rem 0.5rem ' + this.shadowColor
                 }
             }
@@ -24,7 +24,7 @@ export default {
         desktopStyles: function() {
             if (window.screen.width > 500) {
                 return {
-                    'background-color': this.bkColor, 
+                    'background-color': this.bkColor,
                     'box-shadow': '0.5rem 1rem ' + this.shadowColor
                 }
             }
@@ -43,7 +43,9 @@ export default {
 @import url("https://fonts.googleapis.com/css?family=Nunito");
 
 .text__container {
-    width: 100vw;
+    width: 100%;
+    padding:20px;
+    margin: 2rem 0rem
 }
 
 .text__container--title{
@@ -65,12 +67,11 @@ export default {
 }
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-    
+
     .text__container {
         background-color: #fcfcfc;
         border-radius: 2rem;
         box-shadow: -0.3rem 0.5rem #d6d6d6;
-        margin: 0 2rem;
         padding: 1.5rem 1rem;
         width: auto;
     }

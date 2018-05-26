@@ -113,7 +113,7 @@ section{
     .prize__container {
         box-shadow: 0 1rem #ffa6c7;
         border-radius: 2rem;
-        padding: 0.8rem;
+        padding: 1.8rem 0.8rem;
     }
 
     .prize__list {
