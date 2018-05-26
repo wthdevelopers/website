@@ -5,18 +5,21 @@
   <div class="subContainer">
     <textContainer v-bind:title="content1.title" v-bind:content="content1.content" bkColor='red' shadowColor='black'></textContainer>
   </div>
+  <Schedule></Schedule>
 </div>
 </template>
 <script>
 import Landing from '@/components/Landing.vue'
 import Prizes from '@/components/Prizes.vue'
 import textContainer from '@/components/textContainer.vue'
+import Schedule from '@/components/Schedule.vue'
 
 export default {
   components: {
     'Landing':Landing,
     'Prizes':Prizes,
-    'textContainer': textContainer
+    'textContainer': textContainer,
+    'Schedule': Schedule
   },
   data:()=>{
     return{
@@ -36,5 +39,6 @@ export default {
 }
 .subContainer{
   margin: 30px;
+  align-items: center;
 }
 </style>
