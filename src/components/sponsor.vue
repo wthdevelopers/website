@@ -52,7 +52,7 @@ h1{
 .parent{
   padding: 10px 10px 10px 10px;
 }
-@@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   .sponsor {
     padding: 20px 20px 20px 20px;
     align-content: center;
