@@ -1,7 +1,7 @@
 <template>
     <div class="text__container" :style="mobileStyles">
         <div class="text__container--title">{{ title }}</div>
-        <div id="test" class="text__container--content" :style="desktopStyles">{{ content }}</div>
+        <div class="text__container--content" :style="desktopStyles" v-html="content"></div>
     </div>
 </template>
 
@@ -44,8 +44,6 @@ export default {
 
 .text__container {
     width: 100%;
-    padding:20px;
-    margin: 2rem 0rem
 }
 
 .text__container--title{
@@ -53,13 +51,14 @@ export default {
     font-size: 3rem;
     text-align: center;
     color: #ff7bac;
+    margin-bottom: 1rem;
 }
 
 .text__container--content {
     font-family: 'Nunito', sans-serif;
     font-size: 1.5rem;
     text-align: justify;
-    padding: 2rem;
+    padding: 1.5rem;
     background-color: #fcfcfc;
     box-shadow: 0.5rem 1rem #d6d6d6;
     color: black;
