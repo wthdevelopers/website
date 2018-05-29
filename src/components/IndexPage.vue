@@ -15,12 +15,14 @@
 import Landing from '@/components/Landing.vue'
 import Prizes from '@/components/Prizes.vue'
 import textContainer from '@/components/textContainer.vue'
+import Schedule from '@/components/Schedule.vue'
 
 export default {
   components: {
     'Landing':Landing,
     'Prizes':Prizes,
-    'textContainer': textContainer
+    'textContainer': textContainer,
+    'Schedule': Schedule
   },
   data:()=>{
     return{
