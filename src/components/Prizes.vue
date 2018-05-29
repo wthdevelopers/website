@@ -44,12 +44,14 @@ export default {
 
 @import url("https://fonts.googleapis.com/css?family=Quicksand:700");
 @import url("https://fonts.googleapis.com/css?family=Nunito");
-section{
+
+/*section{
   padding:30px;
-}
-.prizes {
+}*/
+
+/*.prizes {
     margin: 2rem 0;
-}
+}*/
 
 .section-title {
     font-family: 'Quicksand', sans-serif;

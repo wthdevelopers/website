@@ -64,8 +64,7 @@ export default {
 @import url("https://fonts.googleapis.com/css?family=Nunito");
 
     .schedule__table {
-        width: 25rem;
-        margin: 2rem auto;
+        width: 100%;
     }
 
     .table__title {
@@ -75,6 +74,7 @@ export default {
         margin: auto;
         padding: 0;
         color: #6eadff;
+        margin-bottom: 1rem;
     }
 
     .table__container {
@@ -86,12 +86,12 @@ export default {
         border-collapse: collapse;
         box-shadow: -1.0rem 1rem #a3d6f3;
         text-align: left;
-        font-size: 1rem;
+        font-size: 1.5rem;
         margin: auto;
     }
 
     th {
-        height: 4rem;
+        height: 5rem;
         vertical-align: bottom;
         background-color: #dbebff;
         font-weight: normal;
@@ -117,7 +117,7 @@ export default {
     }
     
     td {
-        height: 2.5rem;
+        height: 3.5rem;
     }
 
     td:first-child {

@@ -8,6 +8,12 @@
     <div class="subContainer">
       <textContainer v-bind:title="content2.title" v-bind:content="content2.content" bkColor="tContainerColor.bkColor" shadowColor="tContainerColor.shadowColor"></textContainer>
     </div>
+    <div class="subContainer">
+        <Schedule></Schedule>
+    </div>
+    <div class="subContainer">
+      <Prizes></Prizes>
+    </div>
   </section>
 </div>
 </template>
@@ -59,7 +65,7 @@ export default {
   }
 
   .container__info {
-    margin: 15vh 8vw;
+    margin: 10vh 8vw;
     display: grid;
     grid-template-columns: repeat(2, calc((100vw - 16vw - 5vw)/2));
     grid-template-rows: repeat(auto-fit, 60vh);
@@ -80,5 +86,17 @@ export default {
     grid-row: 1 / span 1;
     align-self: flex-end;
     justify-self: flex-end;
+  }
+
+  .subContainer:nth-child(3) {
+    margin-top: 10vh;
+    width: 36vw;
+    grid-column: 1 / span 1;
+    grid-row: 3 / span 1;
+  }
+
+  .subContainer:nth-child(4) {
+    margin-top: 10vh;
+    grid-column: 1 / span 2;
   }
 </style>
