@@ -15,22 +15,22 @@
     </div>
     <nav class="nav">
       <ul class="nav__items">
-        <li class="nav__item"><a href="#">About</a></li>
-        <li class="nav__item"><a href="#">Schedule</a></li>
-        <li class="nav__item"><a href="#">Prizes</a></li>
-        <li class="nav__item"><a href="#">Sponsors</a></li>
-        <li class="nav__item"><a href="#">FAQs</a></li>
+        <li class="nav__item"><a href="#About">About</a></li>
+        <li class="nav__item"><a href="#Schedule">Schedule</a></li>
+        <li class="nav__item"><a href="#Prizes">Prizes</a></li>
+        <li class="nav__item"><a href="#Sponsors">Sponsors</a></li>
+        <li class="nav__item"><a href="#FAQ">FAQs</a></li>
         <li class="nav__item nav__item--register"><a href="#">Register</a></li>
       </ul>
     </nav>
   </header>
   <nav class="mobile-nav">
     <ul class="mobile-nav__items">
-      <li class="mobile-nav__item"><a href="#">About</a></li>
-      <li class="mobile-nav__item"><a href="#">Schedule</a></li>
-      <li class="mobile-nav__item"><a href="#">Prizes</a></li>
-      <li class="mobile-nav__item"><a href="#">Sponsors</a></li>
-      <li class="mobile-nav__item"><a href="#">FAQs</a></li>
+      <li class="mobile-nav__item"><a href="#About">About</a></li>
+      <li class="mobile-nav__item"><a href="#Schedule">Schedule</a></li>
+      <li class="mobile-nav__item"><a href="#Prizes">Prizes</a></li>
+      <li class="mobile-nav__item"><a href="#Sponsors">Sponsors</a></li>
+      <li class="mobile-nav__item"><a href="#FAQ">FAQs</a></li>
     </ul>
   </nav>
   <div class="main-logo">
@@ -374,14 +374,14 @@ export default {
   }
 
   .main-logo {
-    top: 40%;
+    top: 35%;
     left: calc((100% - 60vw) / 2);
     width: 60vw;
   }
 
   .theme {
     font-size: 6vw;
-    top: 45%;
+    top: 35%;
     left: unset;
     right: calc((100% - 60vw) / 2);
     text-align: right;
@@ -389,7 +389,7 @@ export default {
 
   .theme__items{
     font-size: 3.5vw;
-    top: 50%;
+    top: 40%;
     left: 0%;
   }
 

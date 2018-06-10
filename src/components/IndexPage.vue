@@ -1,54 +1,63 @@
 <template>
-<div class ='container'>
+<div class="container">
   <Landing></Landing>
+  <section class="VRCat__container">
+    <div class="VRCat">
+        <VRCat></VRCat>
+    </div>
+  </section>
   <section class="container__info">
-    <div class="subContainer">
-      <textContainer v-bind:title="content1.title" v-bind:content="content1.content" bkColor="tContainerColor.bkColor" shadowColor="tContainerColor.shadowColor"></textContainer>
+    <div id="About" class="subContainer">
+      <textContainer :title="content1.title" :content="content1.content" :bkColor="tContainerColor.bkColor" :shadow-color="tContainerColor.shadowColor" shadow-align="left">
+      </textContainer>
     </div>
     <div class="subContainer">
-      <textContainer v-bind:title="content2.title" v-bind:content="content2.content" bkColor="tContainerColor.bkColor" shadowColor="tContainerColor.shadowColor"></textContainer>
+      <textContainer :title="content2.title" :content="content2.content" :bkColor="tContainerColor.bkColor" :shadow-color="tContainerColor.shadowColor" shadow-align="right">
+      </textContainer>
     </div>
-    <div class="subContainer">
+    <div id="Theme" class="subContainer">
+      <Theme></Theme>
+    </div>
+    <div id="Schedule" class="subContainer">
         <Schedule></Schedule>
     </div>
-    <div class="subContainer">
+    <div id="Prizes" class="subContainer">
       <Prizes></Prizes>
     </div>
   </section>
 </div>
 </template>
+
 <script>
 import Landing from '@/components/Landing.vue'
-import Prizes from '@/components/Prizes.vue'
 import textContainer from '@/components/textContainer.vue'
+import Theme from '@/components/Theme.vue'
 import Schedule from '@/components/Schedule.vue'
+import Prizes from '@/components/Prizes.vue'
+import VRCat from '@/components/VRCat.vue'
 
 export default {
   components: {
     'Landing':Landing,
     'Prizes':Prizes,
     'textContainer': textContainer,
-    'Schedule': Schedule
+    'Schedule': Schedule,
+    'Theme': Theme,
+    'VRCat': VRCat
   },
   data:()=>{
     return{
         tContainerColor: {
-          bkColor: '#ffebf1',
-          shadowColor: '#ffa6c7'
+          bkColor: '#fcfcfc',
+          shadowColor: '#d6d6d6'
         },
         content1: {
-            title: 'What The Hack ?',
-            content:'<strong>What The Hack</strong> @ SUTD is a 24 Hour hackathon that aims to bring together people of multiple disciplines\
+          title: 'What The Hack?',
+          content: '<strong>What The Hack</strong> @ SUTD is a 24 Hour hackathon that aims to bring together people of multiple disciplines\
                     and provide them with the resources to jumpstart their ideas.<br><br>\
                     <strong>Come solo or come as a team!</strong><br>\
                     Gather your fellow hackers into a team or come down and form teams on the day itself! Your team can have a <strong>maximum of 4 members</strong>.\
-                    Alternatively, you can go at the themes solo too! Who knows? You might be able to win a prize all by yourself!<br><br>\
-                    <strong>What you get out of What The Hack:</strong><br>\
-                    <ul>\
-                      <li>Bring crazy ideas to life</li>\
-                      <li>Experience VR</li>\
-                      <li>Network with our sponsors!</li>\
-                    </ul>'
+                    Alternatively, you can go at the themes solo too! Who knows? You might be able to win a prize all by yourself!<br><br>'
         },
         content2: {
           title: 'virtual // reality',
@@ -56,7 +65,18 @@ export default {
                     The theme is divided into four categories, each with its own prize!'
         }
       }
+  },
+  created: function() {
+    if (window.screen.width > 1000) {
+      this.content1.content = this.content1.content + 
+                              '<strong>What you get out of What The Hack:</strong><br>\
+                              <ul>\
+                              <li>Bring crazy ideas to life</li>\
+                              <li>Experience VR</li>\
+                              <li>Network with our sponsors!</li>\
+                              </ul>'
     }
+  }
 }
 </script>
 <style scoped>
@@ -64,39 +84,146 @@ export default {
     box-sizing: border-box;
   }
 
+  .VRCat__container {
+    display: inline;
+    position: relative;
+  }
+
+  .VRCat {
+    display: inline-block;
+    position: absolute;
+    top: 10rem;
+    left: 40vw;
+    width: 20vw;
+  }
+
   .container__info {
     margin: 10vh 8vw;
     display: grid;
     grid-template-columns: repeat(2, calc((100vw - 16vw - 5vw)/2));
-    grid-template-rows: repeat(auto-fit, 60vh);
+    grid-template-rows: repeat(5, auto);
     grid-column-gap: 5vw;
   }
 
-  .subContainer:nth-child(1) {
+  .subContainer:nth-child(1) { /* What The Hack ? */
     width: 30vw;
     margin: 0;
     grid-column: 1 / span 1;
     grid-row: 1 / span 2;
   }
 
-  .subContainer:nth-child(2) {
-    width:30vw;
+  .subContainer:nth-child(2) { /* virtual // reallity */
+    width: 30vw;
     margin: 0;
     grid-column: 2 / span 1;
     grid-row: 1 / span 1;
     align-self: flex-end;
     justify-self: flex-end;
   }
-
-  .subContainer:nth-child(3) {
-    margin-top: 10vh;
-    width: 36vw;
-    grid-column: 1 / span 1;
-    grid-row: 3 / span 1;
+  
+  .subContainer:nth-child(3) { /* Theme */
+    margin-top: 12vh;
+    width: 100%;
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 2;
   }
 
-  .subContainer:nth-child(4) {
-    margin-top: 10vh;
+  .subContainer:nth-child(4) { /* Schedule */
+    margin-top: 12vh;
+    width: 100%;
+    grid-column: 1 / span 1;
+    grid-row: 3 / span 2;
+  }
+
+  .subContainer:nth-child(5) { /* Prizes */
+    margin-top: 5vh;
     grid-column: 1 / span 2;
+    grid-row: 5 / span 1;
+  }
+
+
+  @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .VRCat {
+      top: 15rem;
+      left: 65vw;
+      height: 10vh;
+      width: 30vw;
+    }
+
+    .container__info {
+      display: block;
+      margin: 2.5rem 5vw;
+      text-align: center;
+    }
+
+    .subContainer:nth-child(1) {
+      width: 100%;
+      text-align: left;
+    }
+
+    .subContainer:nth-child(1) > div {
+      width: 60vw;
+      display: inline-block;
+      margin: 0 auto;
+    }
+
+    .subContainer:nth-child(2) {
+      width: 100%;
+      margin-top: 2rem;
+    }
+
+    .subContainer:nth-child(3) {
+      width: 100%;
+      margin-top: 4rem;
+    }
+
+    .subContainer:nth-child(3) > section {
+      width: 90%;
+    }
+
+    .subContainer:nth-child(4) {
+      width: 100%;
+      margin-top: 3rem;
+    }
+
+    .subContainer:nth-child(4) > section {
+      width: 90%;
+    }
+
+    .subContainer:nth-child(5) {
+      width: 100%;
+      margin-top: 3rem;
+    }
+
+    .subContainer:nth-child(5) > section {
+      width: 90%;
+    }
+  }
+
+  @media only screen and (min-device-width:768px) and (max-device-width:1024px) and (orientation:portrait) {
+    .VRCat {
+      top: 2rem;
+      left: 65vw;
+      height: 10vh;
+      width: 20vw;
+    }
+
+    .container__info {
+      margin: 5rem 5vw;
+      grid-template-columns: repeat(2, calc((100vw - 10vw - 5vw)/2));
+    }
+
+    .subContainer:nth-child(1) {
+      width: 100%;
+    }
+
+    .subContainer:nth-child(2) {
+      width: 100%;
+      margin-top: 15vh;
+    }
+
+    .subContainer:nth-child(4) {
+      margin-top: 6vh;
+    }
   }
 </style>

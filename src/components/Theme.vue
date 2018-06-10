@@ -39,14 +39,15 @@ export default {
 @import url("https://fonts.googleapis.com/css?family=Nunito");
 
 .themes {
-    margin: 2rem 0;
-    width: 30vw;
+    margin: 0;
+    width: 100%;
 }
 
 .section-title {
     font-family: 'Quicksand', sans-serif;
     font-size: 3rem;
     margin: 0;
+    margin-bottom: 1rem;
     color: #ff7bac;
     text-align: center;
 }
@@ -56,7 +57,7 @@ export default {
     background-color: #ffebf1;
     box-shadow: 0 1rem #ffa6c7;
     border-radius: 3rem;
-    padding: 2rem 1rem;
+    padding: 4rem 1rem;
 }
 
 .theme__list {
@@ -69,8 +70,8 @@ export default {
 }
 
 .theme {
-    width: 13vw;
-    margin: 0 auto;
+    width: 50%;
+    margin: 0;
     display: inline-block;
     vertical-align: top;
 }
@@ -92,16 +93,18 @@ export default {
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
     .themes {
-        margin: 1rem auto;
-        width: 80%;
+        margin: 0 auto;
+        width: 100%;
     }
 
     .section-title {
-        margin-bottom: 1.2rem;
+        margin-bottom: 0.5rem;
+        font-size: 2rem;
     }
 
     .theme__container {
-        box-shadow: 1rem 1rem #ffa6c7;
+        box-shadow: 0 1rem #ffa6c7;
+        padding: 3rem 1rem;
     }
 
     .theme__list {
@@ -114,18 +117,21 @@ export default {
     }
 
     .theme__image {
-        height: 128px;
-        width: 128px;
+        height: 100px;
+        width: 100px;
     }
 
     .theme-category {
         margin: 0.5rem 0;
+        font-size: 1.2rem;
     }
 }
 
 @media only screen and (min-device-width:768px) and (max-device-width:1024px) {
-    .themes {
-        width: 37vw;
+
+    .section-title {
+        margin-bottom: 0.5rem;
+        font-size: 2.5rem;
     }
 
     .theme__container {

@@ -8,28 +8,38 @@
 <script>
 export default {
     name: 'textContainer',
-    props: ['title', 'content', 'bkColor', 'shadowColor'],
+    props: ['title', 'content', 'bkColor', 'shadowColor', 'shadowAlign'],
     computed: {
         mobileStyles: function() {
             if (window.screen.width >= 320 && window.screen.width <= 480) {
+                console.log(Object.values(this.bkColor)==='red')
                 return {
                     'background-color': this.bkColor,
                     'box-shadow': '-0.3rem 0.5rem ' + this.shadowColor
                 }
             }
             else {
-                return 'background-color: none';
+                return 'background-color: unset'
             }
         },
         desktopStyles: function() {
             if (window.screen.width > 500) {
-                return {
-                    'background-color': this.bkColor,
-                    'box-shadow': '0.5rem 1rem ' + this.shadowColor
+                if (this.shadowAlign === 'left') {
+                    return {
+                        'background-color': this.bkColor,
+                        'box-shadow': '-0.5rem 1rem ' + this.shadowColor
+                    }
+                }
+                else {
+                    return {
+                        'background-color': this.bkColor,
+                        'box-shadow': '0.5rem 1rem ' + this.shadowColor
+                    }
+
                 }
             }
             else {
-                return 'background-color: none';
+                return 'background-color: unset';
             }
         }
     }
@@ -69,15 +79,16 @@ export default {
 
     .text__container {
         background-color: #fcfcfc;
-        border-radius: 2rem;
+        border-radius: 1rem;
         box-shadow: -0.3rem 0.5rem #d6d6d6;
-        padding: 1.5rem 1rem;
-        width: auto;
+        padding: 0.5rem;
+        width: 100%;
     }
 
     .text__container--title {
-        font-size: 2rem;
+        font-size: 1.2rem;
         text-align: left;
+        margin: 0;
     }
 
     .text__container--content {
@@ -87,6 +98,18 @@ export default {
         box-shadow: unset;
         padding: 0.5rem 0 0 0;
     }
+}
+
+@media only screen and (min-device-width:768px) and (max-device-width:1024px) {
+    .text__container--title {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+        text-align: center;
+    }
+
+   .text__container--content {
+       font-size: 1.5rem;
+   }
 }
 
 </style>
