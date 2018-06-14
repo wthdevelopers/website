@@ -12,7 +12,6 @@ export default {
     computed: {
         mobileStyles: function() {
             if (window.screen.width >= 320 && window.screen.width <= 480) {
-                console.log(Object.values(this.bkColor)==='red')
                 return {
                     'background-color': this.bkColor,
                     'box-shadow': '-0.3rem 0.5rem ' + this.shadowColor
@@ -23,17 +22,24 @@ export default {
             }
         },
         desktopStyles: function() {
-            if (window.screen.width > 500) {
+            if (window.screen.width >= 768 && window.screen.width <= 1000) {
+                return {
+                    'background-color': this.bkColor,
+                    'box-shadow': '-0.8rem 1.2rem ' + this.shadowColor
+                }
+
+            }
+            else if (window.screen.width > 1000) {
                 if (this.shadowAlign === 'left') {
                     return {
                         'background-color': this.bkColor,
-                        'box-shadow': '-0.5rem 1rem ' + this.shadowColor
+                        'box-shadow': '-0.8vw 1.2vw ' + this.shadowColor
                     }
                 }
                 else {
                     return {
                         'background-color': this.bkColor,
-                        'box-shadow': '0.5rem 1rem ' + this.shadowColor
+                        'box-shadow': '0.8vw 1.2vw ' + this.shadowColor
                     }
 
                 }
@@ -58,35 +64,34 @@ export default {
 
 .text__container--title{
     font-family: 'Quicksand', sans-serif;
-    font-size: 3rem;
+    font-size: 3.5vw;
     text-align: center;
     color: #ff7bac;
-    margin-bottom: 1rem;
+    margin-bottom: 1.2vw;
 }
 
 .text__container--content {
     font-family: 'Nunito', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.8vw;
     text-align: justify;
-    padding: 1.5rem;
+    padding: 1.8vw;
     background-color: #fcfcfc;
-    box-shadow: 0.5rem 1rem #d6d6d6;
+    box-shadow: 0.8vw 1.2vw #d6d6d6;
     color: black;
-    border-radius: 2rem;
+    border-radius: 3vw;
 }
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-
     .text__container {
         background-color: #fcfcfc;
-        border-radius: 1rem;
+        border-radius: 1.5rem;
         box-shadow: -0.3rem 0.5rem #d6d6d6;
-        padding: 0.5rem;
+        padding: 1.5rem 0.8rem;
         width: 100%;
     }
 
     .text__container--title {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
         text-align: left;
         margin: 0;
     }
@@ -100,15 +105,18 @@ export default {
     }
 }
 
-@media only screen and (min-device-width:768px) and (max-device-width:1024px) {
+@media only screen and (min-device-width:768px) and (max-device-width:1000px) {
     .text__container--title {
-        font-size: 2.5rem;
+        font-size: 3rem;
         margin-bottom: 0.5rem;
         text-align: center;
     }
 
    .text__container--content {
-       font-size: 1.5rem;
+       padding: 3rem 1.5rem;
+       font-size: 1.8rem;
+       box-shadow: 0.5rem 1rem #d6d6d6;
+       border-radius: 4rem;
    }
 }
 

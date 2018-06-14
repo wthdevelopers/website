@@ -36,7 +36,7 @@ export default {
         }
     },
     created: function() {
-        if (window.screen.width >= 320 && window.screen.width <= 1024) {
+        if (window.screen.width >= 320 && window.screen.width <= 1000) {
             this.table.schedule1[1] = '0900<br>-<br>1000';
             this.table.schedule2[1] = '1000<br>-<br>1100';
             this.table.schedule3[0] = 'Sun/<br>Sat';
@@ -61,12 +61,12 @@ export default {
 
     .table__title {
         font-family: 'Quicksand', sans-serif;
-        font-size: 3rem;
+        font-size: 3.5vw;
         text-align: center;
         margin: auto;
         padding: 0;
         color: #6eadff;
-        margin-bottom: 1rem;
+        margin-bottom: 1.2vw;
     }
 
     .table__container {
@@ -74,24 +74,24 @@ export default {
         background-color: #dbebff;
         table-layout: auto;
         width: 100%;
-        border-radius: 3rem;
+        border-radius: 6vw;
         border-collapse: collapse;
-        box-shadow: -1.0rem 1rem #a3d6f3;
+        box-shadow: -1.2vw 1.2vw #a3d6f3;
         text-align: left;
-        font-size: 1.5rem;
+        font-size: 1.8vw;
         margin: 0;
     }
 
     th {
-        height: 5rem;
+        height: 7.8vw;
         vertical-align: bottom;
         background-color: #dbebff;
-        padding-bottom: 0.5rem;
+        padding-bottom: 0.6vw;
     }
 
     th.table__header:first-child {
-        border-top-left-radius: 3rem;
-        padding-left: 1.5rem;
+        border-top-left-radius: 6vw;
+        padding-left: 1.6vw;
     }
 
     th:nth-child(2) {
@@ -101,16 +101,16 @@ export default {
     }
 
     th.table__header:last-child {
-        border-top-right-radius: 3rem;
+        border-top-right-radius: 6vw;
     }
 
     th.table__footer:first-child {
-        border-bottom-left-radius: 3rem;
-        padding-left: 1.5rem;
+        border-bottom-left-radius: 6vw;
+        padding-left: 1.6vw;
     }
 
     th.table__footer:last-child {
-        border-bottom-right-radius: 3rem;
+        border-bottom-right-radius: 6vw;
     }
 
     tr:nth-child(even) {
@@ -118,13 +118,13 @@ export default {
     }
 
     td {
-        padding: 0.5rem 0;
-        line-height: 3.5rem;
+        padding: 0.6vw 0;
+        line-height: 4vw;
         font-weight: bold;
     }
 
     td:first-child {
-        padding-left: 1.5rem;
+        padding-left: 1.6vw;
     }
 
     td:nth-child(2) {
@@ -141,46 +141,116 @@ export default {
         }
 
         .table__title {
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .table__container {
-            box-shadow: 0 1rem #a3d6f3;
-            font-size: 1rem;
-        }
-        
-        th {
-            height: 3.5rem;
-            padding-bottom: 0.2rem;
-        }
-
-        th.table__header:first-child {
-            padding-left: 1rem;
-        }
-
-        th:nth-child(2) {
-            padding-left: 5vw;
-            padding-right: 5vw;
-        }
-
-        td {
-            line-height: 1rem;
-        }
-
-        td:first-child {
-            padding-left: 1rem;
-        }
-    }
-
-    @media only screen and (min-device-width:768px) and (max-device-width:1024px) {
-        .table__title {
             font-size: 2.5rem;
             margin-bottom: 0.5rem;
         }
 
+        .table__container {
+            box-shadow: 0 1.2rem #a3d6f3;
+            font-size: 1.2rem;
+            border-radius: 4rem;
+        }
+        
+        th {
+            height: 5rem;
+            padding-bottom: 0.2rem;
+        }
+
+        th.table__header:first-child {
+            border-top-left-radius: 4rem; /* Change mobileradius to 4rem*/
+            padding-left: 1.2rem;
+
+        }
+
+        th.table__header:last-child {
+            border-top-right-radius: 4rem;
+        }
+
+        th.table__footer:first-child {
+            border-bottom-left-radius: 4rem;
+            padding-left: 1.2rem;
+        }
+    
+        th.table__footer:last-child {
+            border-bottom-right-radius: 4rem;
+        }
+
+        th:nth-child(2) {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
         td {
-            line-height: 2rem;
+            line-height: 1.5rem;
+        }
+
+        td:first-child {
+            padding-left: 1.2rem;
+        }
+        
+        td:nth-child(2) {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+    }
+
+    @media only screen and (min-device-width:768px) and (max-device-width:1000px) {
+        .schedule__table {
+            margin: 0 auto;
+            width: 65%;
+        }
+
+        .table__title {
+            font-size: 4rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .table__container {
+            font-size: 2rem;
+            box-shadow: 0 1.2rem #a3d6f3;
+            border-radius: 6rem;
+        }
+
+        th {
+            height: 8rem;
+            padding-bottom: 0.5rem;
+        }
+
+        th.table__header:first-child {
+            border-top-left-radius: 6rem;
+            padding-left: 2rem;
+        }
+
+        th:nth-child(2) {
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+        }
+
+        th.table__header:last-child {
+            border-top-right-radius: 6rem;
+        }
+
+        th.table__footer:first-child {
+            border-bottom-left-radius: 6rem;
+            padding-left: 1.5rem;
+        }
+
+        th.table__footer:last-child {
+            border-bottom-right-radius: 6rem;
+        }
+
+        td {
+            padding: 0.5rem 0;
+            line-height: 2.3rem;
+        }
+
+        td:first-child {
+            padding-left: 2rem;
+        }
+
+        td:nth-child(2) {
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
         }
     }
 </style>

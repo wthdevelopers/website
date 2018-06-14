@@ -4,9 +4,9 @@
         <div class="prize__container">
             <ul class="prize__list">
                 <li class="prize" v-for="prize in prizes">
-                    <div class="prize__image"></div>
-                    <h5 class="prize-category" v-html="prize[0]"></h5>
-                    <h5 class="prize-amount">{{ prize[1] }}</h5>
+                    <img :src="imgPath(prize.image)" class="prize__image"></img>
+                    <h5 class="prize-category" v-html="prize.category"></h5>
+                    <h5 class="prize-amount">{{ prize.amount }}</h5>
                 </li>
             </ul>
         </div>
@@ -16,21 +16,10 @@
 <script>
 export default {
     name: 'Prize',
-    data:() => {
-        return {
-            prizes: {
-                prize1: ['BEST<br>EDUCATION', '$9999'],
-                prize2: ['BEST<br>HUMAN INTERACTION', '$9999'],
-                prize3: ['BEST<br>ART & DESIGN', '$9999'],
-                prize4: ['BEST<br>SMART CITIES', '$9999'],
-                prize5: ['BEST<br>THE THIRD WORLD', '$9999']
-            }
-        }
-    },
-    created: function() {
-        if (window.screen.width >= 768 && window.screen.width <= 1024) {
-            this.prizes.prize3[0] = 'BEST<br>ART &<br>DESIGN';
-            this.prizes.prize4[0] = 'BEST<br>SMART<br>CITIES';
+    props: ['prizes'],
+    methods: {
+        imgPath: function(imgName) {
+            return require('@/assets/' + imgName)
         }
     }
 }
@@ -52,19 +41,19 @@ export default {
 
 .section-title {
     font-family: 'Quicksand', sans-serif;
-    font-size: 3rem;
+    font-size: 3.5vw;
     margin: 0;
     color: #ff7bac;
     text-align: center;
-    margin-bottom: 1rem;
+    margin-bottom: 1.2vw;
 }
 
 .prize__container {
     font-family: 'Nunito', sans-serif;
     background-color: #ffebf1;
-    box-shadow: 0 1rem #ffa6c7;
-    border-radius: 3rem;
-    padding: 3rem 1rem;
+    box-shadow: 0 1.2vw #ffa6c7;
+    border-radius: 6vw;
+    padding: 4.5vw 1.2vw;
 }
 
 .prize__list {
@@ -77,31 +66,28 @@ export default {
 }
 
 .prize {
-    width: 30%;
-    max-width: 25rem;
+    width: 16.5vw;
 }
 
 .prize__image {
-    height: 120px;
-    width: 120px;
-    background-color: white;
+    height: 8.5vw;
+    width: 8.5vw;
     margin: auto;
-    padding: 1rem;
 }
 
 .prize-category {
     text-align: center;
     color: black;
-    margin: 1rem 0;
-    font-size: 1.5rem;
-    height: 6rem;
+    margin: 1vw 0;
+    font-size: 1.8vw;
+    height: 7vw;
 }
 
 .prize-amount {
     text-align: center;
     color: black;
-    margin: 0.5rem 0;
-    font-size: 1.5rem;
+    margin: 0.6vw 0;
+    font-size: 1.8vw;
 }
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
@@ -112,12 +98,13 @@ export default {
 
     .section-title {
         margin-bottom: 0.5rem;
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     .prize__container {
-        box-shadow: 0 1rem #ffa6c7;
-        padding: 3rem 1rem;
+        box-shadow: 0 1.2rem #ffa6c7;
+        border-radius: 4rem;
+        padding: 4rem 1rem;
     }
 
     .prize__list {
@@ -131,30 +118,66 @@ export default {
     }
 
     .prize__image {
-        height: 100px;
-        width: 100px;
+        height: 150px;
+        width: 150px;
     }
 
     .prize-category {
-        font-size: 1rem;
+        font-size: 1.5rem;
         margin: 0.5rem 0;
         height: auto;
     }
 
     .prize-amount {
-        font-size: 1rem;
+        font-size: 1.5rem;
+        margin: 0;
+        margin-bottom: 1.5rem;
     }
 }
 
-@media only screen and (min-device-width:768px) and (max-device-width:1024px) {
+@media only screen and (min-device-width:768px) and (max-device-width:1000px) {
+    .prizes {
+        margin: 2rem auto;
+        width: 65%;
+    }
+
+    .section-title {
+        margin-bottom: 0.5rem;
+        font-size: 4rem;
+    }
+
+    .prize__container {
+        box-shadow: 0 1.2rem #ffa6c7;
+        border-radius: 6rem;
+        padding: 5rem 1rem;
+    }
+
+    .prize__list {
+        display: block;
+        width: 100%;
+    }
+
+    .prize {
+        width: 100%;
+        margin: auto;
+    }
+
+    .prize__image {
+        height: 250px;
+        width: 250px;
+    }
+
     .prize-category {
-        font-size: 1.2rem;
+        font-size: 2.5rem;
+        margin: 1rem 0;
         margin-bottom: 0;
-        height: 5rem;
+        height: auto;
     }
 
     .prize-amount {
-        font-size: 1.2rem;
+        font-size: 2.5rem;
+        margin: 0.5rem 0;
+        margin-bottom: 2rem;
     }
 }
 </style>

@@ -6,6 +6,11 @@
         <VRCat></VRCat>
     </div>
   </section>
+  <section class="filler">
+      <div class=filler__container>
+        <img src='../assets/FlippedCat.png'>
+      </div>
+  </section>
   <section class="container__info">
     <div id="About" class="subContainer">
       <textContainer :title="content1.title" :content="content1.content" :bkColor="tContainerColor.bkColor" :shadow-color="tContainerColor.shadowColor" shadow-align="left">
@@ -16,13 +21,13 @@
       </textContainer>
     </div>
     <div id="Theme" class="subContainer">
-      <Theme></Theme>
+      <Theme :themes="themes"></Theme>
     </div>
     <div id="Schedule" class="subContainer">
         <Schedule></Schedule>
     </div>
     <div id="Prizes" class="subContainer">
-      <Prizes></Prizes>
+      <Prizes :prizes="prizes"></Prizes>
     </div>
   </section>
 </div>
@@ -63,6 +68,55 @@ export default {
           title: 'virtual // reality',
           content: 'This year’s theme is virtual reality but by no means are you restricted solely to VR and AR hacks!\
                     The theme is divided into four categories, each with its own prize!'
+        },
+        themes: {
+          theme1: {
+            image: 'FlippedCat.png',
+            theme: 'Education'
+          },
+          theme2: {
+            image: 'FlippedCat.png',
+            theme: 'Smart Cities'
+          },
+          theme3: {
+            image: 'FlippedCat.png',
+            theme: 'Art & Design'
+          },
+          theme4: {
+            image: 'FlippedCat.png',
+            theme: 'The Third World'
+          },
+          theme5: {
+            image: 'FlippedCat.png',
+            theme: 'Human Interaction'
+          },
+        },
+        prizes: {
+          prize1: {
+            image: 'FlippedCat.png',
+            category: 'BEST<br>EDUCATION',
+            amount: '$9999'
+          },
+          prize2: {
+            image: 'FlippedCat.png',
+            category: 'BEST<br>HUMAN INTERACTION',
+            amount: '$9999'
+          },
+          prize3: {
+            image: 'FlippedCat.png',
+            category: 'BEST<br>ART & DESIGN',
+            amount: '$9999'
+          },
+          prize4: {
+            image: 'FlippedCat.png',
+            category: 'BEST<br>SMART CITIES',
+            amount: '$9999'
+          },
+          prize5: {
+            image: 'FlippedCat.png',
+            category: 'BEST<br>THE THIRD WORLD',
+            amount: '$9999'
+          }
         }
       }
   },
@@ -92,28 +146,44 @@ export default {
   .VRCat {
     display: inline-block;
     position: absolute;
-    top: 10rem;
-    left: 40vw;
-    width: 20vw;
+    top: 11vw;
+    left: calc((100vw - 15vw) / 2 + 2.5vw);
+    width: 15vw;
+  }
+
+  .filler {
+    display: inline;
+    position: relative;
+  }
+
+  .filler__container {
+    display: inline-block;
+    position: absolute;
+    top: 100vw;
+    left: 60vw;
+  }
+  
+  .filler__container img {
+    width: 15vw;
   }
 
   .container__info {
-    margin: 10vh 8vw;
+    margin: 5vw 8vw;
     display: grid;
-    grid-template-columns: repeat(2, calc((100vw - 16vw - 5vw)/2));
+    grid-template-columns: repeat(2, calc((100vw - 16vw - 5vw) / 2));
     grid-template-rows: repeat(5, auto);
     grid-column-gap: 5vw;
   }
 
   .subContainer:nth-child(1) { /* What The Hack ? */
-    width: 30vw;
+    width: 90%;
     margin: 0;
     grid-column: 1 / span 1;
     grid-row: 1 / span 2;
   }
 
   .subContainer:nth-child(2) { /* virtual // reallity */
-    width: 30vw;
+    width: 80%;
     margin: 0;
     grid-column: 2 / span 1;
     grid-row: 1 / span 1;
@@ -122,25 +192,24 @@ export default {
   }
   
   .subContainer:nth-child(3) { /* Theme */
-    margin-top: 12vh;
+    margin-top: 6vw;
     width: 100%;
     grid-column: 2 / span 1;
     grid-row: 2 / span 2;
   }
 
   .subContainer:nth-child(4) { /* Schedule */
-    margin-top: 12vh;
+    margin-top: 6vw;
     width: 100%;
     grid-column: 1 / span 1;
     grid-row: 3 / span 2;
   }
 
   .subContainer:nth-child(5) { /* Prizes */
-    margin-top: 5vh;
+    margin-top: 6vw;
     grid-column: 1 / span 2;
     grid-row: 5 / span 1;
   }
-
 
   @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
     .VRCat {
@@ -150,13 +219,17 @@ export default {
       width: 30vw;
     }
 
+    .filler {
+      display: none;
+    }
+
     .container__info {
       display: block;
       margin: 2.5rem 5vw;
       text-align: center;
     }
 
-    .subContainer:nth-child(1) {
+    .subContainer:nth-child(1) { /* What The Hack ? */
       width: 100%;
       text-align: left;
     }
@@ -167,12 +240,12 @@ export default {
       margin: 0 auto;
     }
 
-    .subContainer:nth-child(2) {
+    .subContainer:nth-child(2) { /* virtual // reallity */
       width: 100%;
       margin-top: 2rem;
     }
 
-    .subContainer:nth-child(3) {
+    .subContainer:nth-child(3) { /* Theme */
       width: 100%;
       margin-top: 4rem;
     }
@@ -181,18 +254,18 @@ export default {
       width: 90%;
     }
 
-    .subContainer:nth-child(4) {
+    .subContainer:nth-child(4) { /* Schedule */
       width: 100%;
-      margin-top: 3rem;
+      margin-top: 4rem;
     }
 
     .subContainer:nth-child(4) > section {
       width: 90%;
     }
 
-    .subContainer:nth-child(5) {
+    .subContainer:nth-child(5) { /* Prizes */
       width: 100%;
-      margin-top: 3rem;
+      margin-top: 4rem;
     }
 
     .subContainer:nth-child(5) > section {
@@ -200,30 +273,57 @@ export default {
     }
   }
 
-  @media only screen and (min-device-width:768px) and (max-device-width:1024px) and (orientation:portrait) {
+  @media only screen and (min-device-width:768px) and (max-device-width:1000px) {
     .VRCat {
-      top: 2rem;
-      left: 65vw;
+      top: 20rem;
+      left: 67vw;
       height: 10vh;
-      width: 20vw;
+      width: 30vw;
+    }
+
+    .filler {
+      display: none;
     }
 
     .container__info {
+      display: block;
+      margin: 2.5rem 5vw;
+      text-align: center;
       margin: 5rem 5vw;
-      grid-template-columns: repeat(2, calc((100vw - 10vw - 5vw)/2));
     }
 
-    .subContainer:nth-child(1) {
+    .subContainer:nth-child(1) { /* What The Hack ? */
       width: 100%;
+      text-align: left;
+      grid-area: unset;
     }
-
-    .subContainer:nth-child(2) {
+    
+    .subContainer:nth-child(1) > div {
+      width: 60vw;
+      display: inline-block;
+      margin: 0 auto;
+    }
+    
+    .subContainer:nth-child(2) { /* virtual // reallity */
       width: 100%;
-      margin-top: 15vh;
+      margin-top: 5rem;
+      grid-area: unset;
+    }
+    
+    .subContainer:nth-child(3) { /* Theme */
+      margin-top: 5rem;
+      width: 100%;
+      grid-area: unset;
+    }
+    
+    .subContainer:nth-child(4) { /* Schedule */
+      margin-top: 5rem;
+      grid-area: unset;
     }
 
-    .subContainer:nth-child(4) {
-      margin-top: 6vh;
+    .subContainer:nth-child(5) { /* Prizes */
+      margin-top: 5rem;
+      grid-area: unset;
     }
   }
 </style>

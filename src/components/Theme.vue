@@ -3,23 +3,9 @@
         <h1 class="section-title">Themes</h1>
         <div class="theme__container">
             <ul class="theme__list">
-                <li class="theme">
-                    <div class="theme__image"></div>
-                    <p class="theme-category">Education</p>
-                </li><li class="theme">
-                    <div class="theme__image"></div>
-                    <p class="theme-category">Smart Cities</p>
-                </li>
-                <li class="theme">
-                    <div class="theme__image"></div>
-                    <p class="theme-category">Art & Design</p>
-                </li><li class="theme">
-                    <div class="theme__image"></div>
-                    <p class="theme-category">The Third World</p>
-                </li>
-                <li class="theme">
-                    <div class="theme__image"></div>
-                    <p class="theme-category">Human Interaction</p>
+                <li class="theme" v-for="theme in themes">
+                    <img :src="imgPath(theme.image)" class="theme__image"></img>
+                    <p class="theme-category">{{ theme.theme }}</p>
                 </li>
             </ul>
         </div>
@@ -28,7 +14,13 @@
 
 <script>
 export default {
-    name: 'Prize',
+    name: 'Prize', 
+    props: ['themes'],
+    methods: {
+        imgPath: function(imgName) {
+            return require('@/assets/' + imgName)
+        }
+    }
 }
 </script>
 
@@ -45,9 +37,9 @@ export default {
 
 .section-title {
     font-family: 'Quicksand', sans-serif;
-    font-size: 3rem;
+    font-size: 3.5vw;
     margin: 0;
-    margin-bottom: 1rem;
+    margin-bottom: 1.2vw;
     color: #ff7bac;
     text-align: center;
 }
@@ -55,9 +47,9 @@ export default {
 .theme__container {
     font-family: 'Nunito', sans-serif;
     background-color: #ffebf1;
-    box-shadow: 0 1rem #ffa6c7;
-    border-radius: 3rem;
-    padding: 4rem 1rem;
+    box-shadow: 0 1.2vw #ffa6c7;
+    border-radius: 6vw;
+    padding: 4.5vw 1.2vw;
 }
 
 .theme__list {
@@ -70,25 +62,24 @@ export default {
 }
 
 .theme {
-    width: 50%;
+    width: 48%;
     margin: 0;
     display: inline-block;
     vertical-align: top;
 }
 
 .theme__image {
-    height: 120px;
-    width: 120px;
-    background-color: white;
+    height: 8.5vw;
+    width: 8.5vw;
     margin: auto;
 }
 
 .theme-category {
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.8vw;
     font-weight: bold;
     color: black;
-    margin: 1rem auto;
+    margin: 1.2vw auto;
 }
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
@@ -99,12 +90,13 @@ export default {
 
     .section-title {
         margin-bottom: 0.5rem;
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     .theme__container {
-        box-shadow: 0 1rem #ffa6c7;
-        padding: 3rem 1rem;
+        border-radius: 4rem;
+        padding: 4rem 1rem;
+        box-shadow: 0 1.2rem #ffa6c7;
     }
 
     .theme__list {
@@ -117,41 +109,51 @@ export default {
     }
 
     .theme__image {
-        height: 100px;
-        width: 100px;
+        height: 150px;
+        width: 150px;
     }
 
     .theme-category {
         margin: 0.5rem 0;
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
 }
 
-@media only screen and (min-device-width:768px) and (max-device-width:1024px) {
+@media only screen and (min-device-width:768px) and (max-device-width:1000px) {
+
+    .themes {
+        margin: 0 auto;
+        width: 65%;
+    }
 
     .section-title {
+        font-size: 4rem;
         margin-bottom: 0.5rem;
-        font-size: 2.5rem;
     }
 
     .theme__container {
-        padding: 1.5rem 1rem;
+        box-shadow: 0 1.2rem #ffa6c7;
+        padding: 5rem 1rem;
+        border-radius: 6rem;
+    }
+
+    .theme__list {
+        display: block;
     }
 
     .theme {
-        width: 15vw;
-        margin: 0 calc((100% - 30vw) / 4);
-        margin-top: 1rem;
+        width: 100%;
+        margin: auto;
     }
 
     .theme__image {
-        height: 12vw;
-        width: 12vw;
+        height: 250px;
+        width: 250px;
     }
 
     .theme-category {
-        font-size: 1.5rem;
-        margin-bottom: 0;
+        font-size: 2.5rem;
+        margin: 1.5rem 0;
     }
 
 }

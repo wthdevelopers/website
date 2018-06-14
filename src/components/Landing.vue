@@ -94,8 +94,8 @@ export default {
 
 .canvas-small {
   position: absolute;
-  top: 20%;
-  left: 30%;
+  top: calc((100% - 560px) / 2);
+  left: calc((100% - 560px) / 2);
   width: 560px;
   height: 560px;
   background: linear-gradient(-45deg, #ffa6c7 40%, #6eadff 60%);
@@ -195,9 +195,15 @@ export default {
 
 .main-logo {
   position: relative;
-  top: 23%;
+  top: calc((100% - 150px)/3);
   left: calc(50vw - 400px);
   width: 500px;
+  height: 130px;
+}
+
+.main-logo svg {
+  width: 100%;
+  height: 100%;
 }
 
 .theme {
@@ -206,7 +212,7 @@ export default {
   font-size: 3.2rem;
   font-weight: bolder;
   position: relative;
-  top: 25%;
+  top: calc((100% - 150px)/3);
   left: calc(50vw - 40px);
   vertical-align: top;
 }
@@ -220,7 +226,7 @@ export default {
   font-weight: bold;
   color: white;
   position: relative;
-  top: 25%;
+  top: calc((100% - 150px)/3);
   left: calc(50vw - 40px);
 }
 
@@ -344,7 +350,7 @@ export default {
   }
 }
 
-@media only screen and (min-device-width:768px) and (max-device-width:1024px) {
+@media only screen and (min-device-width:768px) and (max-device-width:1000px) {
   .canvas-small {
     top: 25%;
     left: calc((100% - 80vw) / 2);
