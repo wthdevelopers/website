@@ -29,6 +29,12 @@
     <div id="Prizes" class="subContainer">
       <Prizes :prizes="prizes"></Prizes>
     </div>
+    <div id="Sponsor" class="subContainer">
+      <Sponsor></Sponsor>
+    </div>
+    <div id="Index" class="subContainer">
+      <Index></Index>
+    </div>
   </section>
 </div>
 </template>
@@ -40,6 +46,8 @@ import Theme from '@/components/Theme.vue'
 import Schedule from '@/components/Schedule.vue'
 import Prizes from '@/components/Prizes.vue'
 import VRCat from '@/components/VRCat.vue'
+import Sponsor from '@/components/sponsor.vue'
+import index from '@/components/index.vue'
 
 export default {
   components: {
@@ -48,7 +56,9 @@ export default {
     'textContainer': textContainer,
     'Schedule': Schedule,
     'Theme': Theme,
-    'VRCat': VRCat
+    'VRCat': VRCat,
+    'Sponsor': Sponsor,
+    'Index': index
   },
   data:()=>{
     return{
@@ -171,7 +181,7 @@ export default {
     margin: 5vw 8vw;
     display: grid;
     grid-template-columns: repeat(2, calc((100vw - 16vw - 5vw) / 2));
-    grid-template-rows: repeat(5, auto);
+    grid-template-rows: repeat(8, auto);
     grid-column-gap: 5vw;
   }
 
@@ -209,6 +219,18 @@ export default {
     margin-top: 6vw;
     grid-column: 1 / span 2;
     grid-row: 5 / span 1;
+  }
+
+  .subContainer:nth-child(6) { /* Sponsor */
+    margin-top: 6vw;
+    grid-column: 1 / span 2;
+    grid-row: 6 / span 2;
+  }
+
+  .subContainer:nth-child(7) { /* index */
+    margin-top: 6vw;
+    grid-column: 1 / span 2;
+    grid-row: 8 / span 2;
   }
 
   @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {

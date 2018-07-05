@@ -118,7 +118,7 @@ export default {
     }
 
     td {
-        padding: 0.6vw 0;
+        padding: 0.3vw 0;
         line-height: 4vw;
         font-weight: bold;
     }
@@ -129,8 +129,8 @@ export default {
 
     td:nth-child(2) {
         text-align: center;
-        padding-left: 3vw;
-        padding-right: 3vw;
+        padding-left: 1vw;
+        padding-right: 1vw;
     }
 
 

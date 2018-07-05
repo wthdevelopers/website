@@ -31,10 +31,6 @@ export default {
 @import url("https://fonts.googleapis.com/css?family=Quicksand:700");
 @import url("https://fonts.googleapis.com/css?family=Nunito");
 
-/*section{
-  padding:30px;
-}*/
-
 .prizes {
     width: 100%;
 }
