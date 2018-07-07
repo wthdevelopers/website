@@ -131,7 +131,7 @@ export default {
     }
 }
 
-@media only screen and (min-device-width:768px) and (max-device-width:1000px) {
+@media only screen and (min-device-width:768px) and (max-device-width:800px) {
     .prizes {
         margin: 2rem auto;
         width: 65%;

@@ -47,7 +47,7 @@ export default {
 .theme__container {
     font-family: 'Nunito', sans-serif;
     background-color: #ffebf1;
-    box-shadow: 0 1.2vw #ffa6c7;
+    box-shadow: 1.2vw 1.2vw #ffa6c7;
     border-radius: 6vw;
     padding: 4.5vw 1.2vw;
 }
@@ -119,7 +119,7 @@ export default {
     }
 }
 
-@media only screen and (min-device-width:768px) and (max-device-width:1000px) {
+@media only screen and (min-device-width:768px) and (max-device-width:800px) {
 
     .themes {
         margin: 0 auto;

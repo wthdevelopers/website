@@ -36,7 +36,7 @@ export default {
         }
     },
     created: function() {
-        if (window.screen.width >= 320 && window.screen.width <= 1000) {
+        if (window.screen.width >= 320 && window.screen.width <= 800) {
             this.table.schedule1[1] = '0900<br>-<br>1000';
             this.table.schedule2[1] = '1000<br>-<br>1100';
             this.table.schedule3[0] = 'Sun/<br>Sat';
@@ -194,7 +194,7 @@ export default {
         }
     }
 
-    @media only screen and (min-device-width:768px) and (max-device-width:1000px) {
+    @media only screen and (min-device-width:768px) and (max-device-width:800px) {
         .schedule__table {
             margin: 0 auto;
             width: 65%;

@@ -86,7 +86,8 @@ export default {
 .canvas {
   width: 100vw;
   background: linear-gradient(135deg,#ffa6c7 40%, #6eadff 90%);
-  height: 100vh;
+  height: calc(((9 / 16)) * 100vw); /* 16:9 screen ratio */
+  /*height: 100vh;*/
   position: relative;
   top: 0;
   left: 0;
@@ -94,10 +95,10 @@ export default {
 
 .canvas-small {
   position: absolute;
-  top: calc((100% - 560px) / 2);
-  left: calc((100% - 560px) / 2);
-  width: 560px;
-  height: 560px;
+  top: calc((100% - 30vw) / 2);
+  left: calc((100% - 30vw) / 2);
+  width: 30vw;
+  height: 30vw;
   background: linear-gradient(-45deg, #ffa6c7 40%, #6eadff 60%);
   -webkit-mask-box-image: -webkit-radial-gradient(white 40%, transparent 70%);
   border-radius: 50%;
@@ -117,7 +118,7 @@ export default {
 }
 
 .main-header {
-  padding: 1.8rem 1rem;
+  padding: 1.5vw 1vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -149,7 +150,7 @@ export default {
 
 .icon {
   vertical-align: middle;
-  width: 150px;
+  width: 8vw;
   margin: 0 1rem;
 }
 
@@ -168,12 +169,17 @@ export default {
 }
 
 .nav__item {
-  margin: 0 1.3rem;
+  margin: 0 1vw;
   font-weight: bold;
   color: white;
 }
 
-.nav__item a,
+.nav__item a {
+  font-size: 2.5vw;
+  text-decoration: none;
+  color: white;
+}
+
 .mobile-nav__item a {
   font-size: 1.5rem;
   text-decoration: none;
@@ -183,8 +189,8 @@ export default {
 .nav__item--register a {
   color: white;
   background: #ff7bac;
-  padding: 0.5rem 2rem;
-  border-radius: 2.5rem;
+  padding: 0.5vw 1.5vw;
+  border-radius: 2.5vw;
 }
 
 .nav__item--register a:hover,
@@ -195,10 +201,10 @@ export default {
 
 .main-logo {
   position: relative;
-  top: calc((100% - 150px)/3);
-  left: calc(50vw - 400px);
-  width: 500px;
-  height: 130px;
+  top: calc((100% - 8vw)/3);
+  left: calc(50vw - 20vw);
+  width: 25vw;
+  height: 7vw;
 }
 
 .main-logo svg {
@@ -209,11 +215,11 @@ export default {
 .theme {
   font-family: 'Nunito', sans-serif;
   color: white;
-  font-size: 3.2rem;
+  font-size: 2.5vw;
   font-weight: bolder;
   position: relative;
-  top: calc((100% - 150px)/3);
-  left: calc(50vw - 40px);
+  top: calc((100% - 8vw)/3);
+  left: 48vw;
   vertical-align: top;
 }
 
@@ -222,29 +228,29 @@ export default {
   padding: 0;
   list-style: none;
   font-family: 'Nunito', sans-serif;
-  font-size:1.5rem;
+  font-size: 1.5vw;
   font-weight: bold;
   color: white;
   position: relative;
-  top: calc((100% - 150px)/3);
-  left: calc(50vw - 40px);
+  top: calc((100% - 8vw)/3);
+  left: 48vw
 }
 
 .theme__item{
   display: block;
-  margin: 0.5rem 0; 
+  margin: 0.5vw 0; 
 }
 
 .theme__item--register {
-  margin: 2rem 0rem;
+  margin: 1.5vw 0;
 }
 
 .theme__item--register a {
   color: white;
   background: #ff7bac;
-  font-size: 2.5rem;
-  padding: 0.5rem 3.5rem;
-  border-radius: 2.5rem;
+  font-size: 2vw;
+  padding: 0.5vw 3vw;
+  border-radius: 2vw;
   text-decoration: none;
 }
 
@@ -350,7 +356,7 @@ export default {
   }
 }
 
-@media only screen and (min-device-width:768px) and (max-device-width:1000px) {
+@media only screen and (min-device-width:768px) and (max-device-width:800px) {
   .canvas-small {
     top: 25%;
     left: calc((100% - 80vw) / 2);

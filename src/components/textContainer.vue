@@ -22,14 +22,14 @@ export default {
             }
         },
         desktopStyles: function() {
-            if (window.screen.width >= 768 && window.screen.width <= 1000) {
+            if (window.screen.width >= 768 && window.screen.width <= 800) {
                 return {
                     'background-color': this.bkColor,
                     'box-shadow': '-0.8rem 1.2rem ' + this.shadowColor
                 }
 
             }
-            else if (window.screen.width > 1000) {
+            else if (window.screen.width > 800) {
                 if (this.shadowAlign === 'left') {
                     return {
                         'background-color': this.bkColor,
@@ -105,7 +105,7 @@ export default {
     }
 }
 
-@media only screen and (min-device-width:768px) and (max-device-width:1000px) {
+@media only screen and (min-device-width:768px) and (max-device-width:800px) {
     .text__container--title {
         font-size: 3rem;
         margin-bottom: 0.5rem;

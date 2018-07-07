@@ -131,7 +131,7 @@ export default {
       }
   },
   created: function() {
-    if (window.screen.width > 1000) {
+    if (window.screen.width > 800) {
       this.content1.content = this.content1.content + 
                               '<strong>What you get out of What The Hack:</strong><br>\
                               <ul>\
@@ -295,7 +295,7 @@ export default {
     }
   }
 
-  @media only screen and (min-device-width:768px) and (max-device-width:1000px) {
+  @media only screen and (min-device-width:768px) and (max-device-width:800px) {
     .VRCat {
       top: 20rem;
       left: 67vw;
