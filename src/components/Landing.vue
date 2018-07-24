@@ -87,7 +87,6 @@ export default {
   width: 100vw;
   background: linear-gradient(135deg,#ffa6c7 40%, #6eadff 90%);
   height: calc(((9 / 16)) * 100vw); /* 16:9 screen ratio */
-  /*height: 100vh;*/
   position: relative;
   top: 0;
   left: 0;
@@ -299,6 +298,10 @@ export default {
 
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  .canvas {
+    height: 100vh;
+  }
+
   .canvas-small {
     top: 30%;
     left: calc((100% - 260px) / 2);
@@ -357,6 +360,11 @@ export default {
 }
 
 @media only screen and (min-device-width:768px) and (max-device-width:800px) {
+  .canvas {
+    height: 100vh;
+  }
+
+
   .canvas-small {
     top: 25%;
     left: calc((100% - 80vw) / 2);

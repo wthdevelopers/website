@@ -29,8 +29,11 @@
     <div id="Prizes" class="subContainer">
       <Prizes :prizes="prizes"></Prizes>
     </div>
-    <div id="Sponsor" class="subContainer">
+    <div id="Sponsors" class="subContainer">
       <Sponsor></Sponsor>
+    </div>
+    <div id="FAQ" class="subContainer">
+      <Faqs></Faqs>
     </div>
     <div id="Index" class="subContainer">
       <Index></Index>
@@ -48,6 +51,7 @@ import Prizes from '@/components/Prizes.vue'
 import VRCat from '@/components/VRCat.vue'
 import Sponsor from '@/components/sponsor.vue'
 import index from '@/components/index.vue'
+import Faqs from '@/components/Faqs.vue'
 
 export default {
   components: {
@@ -58,7 +62,8 @@ export default {
     'Theme': Theme,
     'VRCat': VRCat,
     'Sponsor': Sponsor,
-    'Index': index
+    'Index': index,
+    'Faqs': Faqs
   },
   data:()=>{
     return{
@@ -181,7 +186,7 @@ export default {
     margin: 5vw 8vw;
     display: grid;
     grid-template-columns: repeat(2, calc((100vw - 16vw - 5vw) / 2));
-    grid-template-rows: repeat(8, auto);
+    grid-template-rows: repeat(12, auto);
     grid-column-gap: 5vw;
   }
 
@@ -227,10 +232,16 @@ export default {
     grid-row: 6 / span 2;
   }
 
-  .subContainer:nth-child(7) { /* index */
+  .subContainer:nth-child(7) {
     margin-top: 6vw;
     grid-column: 1 / span 2;
     grid-row: 8 / span 2;
+  }
+
+  .subContainer:nth-child(8) { /* index */
+    margin-top: 6vw;
+    grid-column: 1 / span 2;
+    grid-row: 10 / span 2;
   }
 
   @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
