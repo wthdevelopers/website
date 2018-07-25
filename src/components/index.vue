@@ -46,14 +46,19 @@ h1 {
 
 #h1a {
   color: #ff7bac;
+  margin: 0;
+  margin-bottom: 1.2vw;
 }
 
 #h1b {
   color: #6eadff;
+  margin-top: 6vw;
+  margin-bottom: 1.2vw;
 }
 
 p {
-  margin: 1.2vw 0;
+  margin: 0;
+  margin-bottom: 1.2vw;
   font-size: 2vw;
   font-family: 'Nunito', sans-serif;
 }
@@ -69,7 +74,6 @@ a {
 }
 
 footer {
-  margin-top: 1.2vw;
   font-size: 1.8vw;
   font-family: 'Nunito', sans-serif;
 }
@@ -113,7 +117,7 @@ footer {
 
   #h1a {
     font-size: 2rem;
-    margin: 0.5rem auto;
+    margin-bottom: 0.5rem;
   }
 
   .map {
@@ -132,24 +136,53 @@ footer {
 
   #h1b {
     font-size: 2rem;
-    margin: 0.5rem auto;
     margin-top: 4rem;
+    margin-bottom: 0.5rem;
   }
 
   footer {
-    margin-top: 1rem;
     font-size: 0.8rem;
-    margin: 0.5rem auto;
   }
 }
+@media only screen and (min-device-width:768px) and (max-device-width:800px) {
+  .index {
+    margin: 0 auto;
+    width: 90%;
+  }
 
-/* @media only screen and (min-device-width: 490px) and (max-device-width: 800px) {
-  iframe {
-    -webkit-transform: scale(0.8);
-    -moz-transform: scale(0.8);
+  #h1a {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
   }
+
   .map {
-    margin: -20px 30px 0px -10px;
+    width: 100%;
   }
-} */
+
+  iframe {
+    width: 80vw;
+    height: 50vw;
+    margin: auto;
+  }
+
+  .direction {
+    width: 100%;
+  }
+
+  p {
+    margin: 0;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+  }
+
+  #h1b {
+    font-size: 3.5rem;
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+  }
+
+  footer {
+    font-size: 1.5rem;
+  }
+}
 </style>

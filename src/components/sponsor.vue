@@ -100,9 +100,9 @@ h2 {
   .sponsor {
     height: 8.5em;
     width: 8.5rem;
-    margin: 0 auto;
     align-content: center;
     margin: 0.5rem;
+    margin-top: 0;
   }
 
   #h1b {
@@ -126,6 +126,43 @@ h2 {
     -webkit-box-shadow: 0 0.5rem #a3d6f3;
     box-shadow:         0 0.5rem #a3d6f3;
   }
+}
 
+@media only screen and (min-device-width:768px) and (max-device-width:800px) {
+  .sponsors {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .sponsor {
+    height: 35vw;
+    width: 35vw;
+    align-content: center;
+    margin: 2rem;
+    margin-top: 0;
+  }
+
+  #h1b {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    margin: 1.5rem auto;
+    margin-bottom: 1rem;
+  }
+
+  .round {
+    -webkit-border-radius: 3rem;
+    -moz-border-radius: 3rem;
+    border-radius: 3rem;
+  }
+
+  .shadow {
+    -moz-box-shadow:    0 0.8rem #a3d6f3;
+    -webkit-box-shadow: 0 0.8rem #a3d6f3;
+    box-shadow:         0 0.8rem #a3d6f3;
+  }
 }
 </style>

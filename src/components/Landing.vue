@@ -85,9 +85,9 @@ export default {
 
 .canvas {
   width: 100vw;
-  background: linear-gradient(135deg,#ffa6c7 40%, #6eadff 90%);
   height: calc(((9 / 16)) * 100vw); /* 16:9 screen ratio */
   position: relative;
+  background: linear-gradient(135deg,#ffa6c7 40%, #6eadff 90%);
   top: 0;
   left: 0;
 }
@@ -101,27 +101,14 @@ export default {
   background: linear-gradient(-45deg, #ffa6c7 40%, #6eadff 60%);
   -webkit-mask-box-image: -webkit-radial-gradient(white 40%, transparent 70%);
   border-radius: 50%;
-  animation: rotate_background 0.3s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
+  animation: clockwise_spin 4s linear infinite;
 }
 
-@keyframes rotate_background {
-  0% {
-    background: linear-gradient(-45deg, #ffa6c7 40%, #6eadff 60%);
-  }
-  25% {
-    background: linear-gradient(-135deg, #ffa6c7 40%, #6eadff 60%);
-  }
-  50% {
-    background: linear-gradient(-225deg, #ffa6c7 40%, #6eadff 60%);
-  }
-  75% {
-    background: linear-gradient(-315deg, #ffa6c7 40%, #6eadff 60%);
-  }
-  100% {
-    background: linear-gradient(-45deg, #ffa6c7 40%, #6eadff 60%);
-  }
+@keyframes clockwise_spin { 
+  100% { 
+    -webkit-transform: rotate(360deg); 
+    transform: rotate(360deg); 
+  } 
 }
 
 .backdrop {
@@ -424,6 +411,7 @@ export default {
     top: 35%;
     left: calc((100% - 60vw) / 2);
     width: 60vw;
+    height: 15vw;
   }
 
   .theme {
@@ -436,12 +424,16 @@ export default {
 
   .theme__items{
     font-size: 3.5vw;
-    top: 40%;
+    top: 35%;
     left: 0%;
   }
 
   .theme__item{
     text-align: center;
+  }
+
+  .theme__item--register {
+    margin: 4rem 0rem;
   }
 
   .theme__item--register a {

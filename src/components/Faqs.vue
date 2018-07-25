@@ -97,9 +97,9 @@ export default {
     font-family: 'Quicksand', sans-serif;
     font-size: 3.5vw;
     text-align: center;
-    margin: 0;
     padding: 0;
     color: #ff7bac;
+    margin: 0;
     margin-bottom: 1.2vw;
   }
 
@@ -159,10 +159,10 @@ export default {
       margin: 0 auto;
       width: 90%;
     }
-
+    
     .faq-title {
       font-size: 2rem;
-      margin: 0.5rem auto;
+      margin-bottom: 0.5rem;
     }
 
     .faq__container {
@@ -178,4 +178,30 @@ export default {
       margin: 0.5rem 0;
     }
   }
+  
+  @media only screen and (min-device-width:768px) and (max-device-width:800px) {
+    .faqs {
+      margin: 0 auto;
+      width: 90%;
+    }
+
+    .faq-title {
+      font-size: 3.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .faq__container {
+      font-size: 2rem;
+      border-radius: 4rem;
+      padding: 2.5rem 2rem;
+      text-align: left;
+      box-shadow: 0 1.2rem #ffa6c7;
+    }
+
+    .question__container {
+      border-radius: 1rem;
+      margin: 1rem 0;
+    }
+  }
+
 </style>

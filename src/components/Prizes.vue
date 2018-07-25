@@ -1,27 +1,27 @@
 <template>
-    <section class="prizes">
-        <h1 class="section-title">Prizes</h1>
-        <div class="prize__container">
-            <ul class="prize__list">
-                <li class="prize" v-for="prize in prizes">
-                    <img :src="imgPath(prize.image)" class="prize__image"></img>
-                    <h5 class="prize-category" v-html="prize.category"></h5>
-                    <h5 class="prize-amount">{{ prize.amount }}</h5>
-                </li>
-            </ul>
-        </div>
-      </section>
+  <section class="prizes">
+    <h1 class="section-title">Prizes</h1>
+    <div class="prize__container">
+      <ul class="prize__list">
+        <li class="prize" v-for="prize in prizes">
+          <img :src="imgPath(prize.image)" class="prize__image"></img>
+          <h5 class="prize-category" v-html="prize.category"></h5>
+          <h5 class="prize-amount">{{ prize.amount }}</h5>
+        </li>
+      </ul>
+    </div>
+    </section>
 </template>
 
 <script>
 export default {
-    name: 'Prize',
-    props: ['prizes'],
-    methods: {
-        imgPath: function(imgName) {
-            return require('@/assets/' + imgName)
-        }
+  name: 'Prize',
+  props: ['prizes'],
+  methods: {
+    imgPath: function(imgName) {
+      return require('@/assets/' + imgName)
     }
+  }
 }
 </script>
 
@@ -31,149 +31,148 @@ export default {
 @import url("https://fonts.googleapis.com/css?family=Nunito");
 
 .prizes {
-    width: 100%;
+  width: 100%;
 }
 
 .section-title {
-    font-family: 'Quicksand', sans-serif;
-    font-size: 3.5vw;
-    margin: 0;
-    color: #ff7bac;
-    text-align: center;
-    margin-bottom: 1.2vw;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 3.5vw;
+  margin: 0;
+  color: #ff7bac;
+  text-align: center;
+  margin-bottom: 1.2vw;
 }
 
 .prize__container {
-    font-family: 'Nunito', sans-serif;
-    background-color: #ffebf1;
-    box-shadow: 0 1.2vw #ffa6c7;
-    border-radius: 6vw;
-    padding: 4.5vw 1.2vw;
+  font-family: 'Nunito', sans-serif;
+  background-color: #ffebf1;
+  box-shadow: 0 1.2vw #ffa6c7;
+  border-radius: 6vw;
+  padding: 4.5vw 1.2vw;
 }
 
 .prize__list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    display: flex;
-    justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 .prize {
-    width: 16.5vw;
-    display: inline-block;
-    vertical-align: top;
+  width: 16.5vw;
+  display: inline-block;
+  vertical-align: top;
 }
 
 .prize__image {
-    height: 8.5vw;
-    width: 8.5vw;
-    margin: auto;
+  height: 8.5vw;
+  width: 8.5vw;
+  margin: auto;
 }
 
 .prize-category {
-    text-align: center;
-    color: black;
-    margin: 1vw 0;
-    font-size: 1.8vw;
-    height: 7vw;
+  text-align: center;
+  color: black;
+  margin: 1vw 0;
+  font-size: 1.8vw;
+  height: 7vw;
 }
 
 .prize-amount {
-    text-align: center;
-    color: black;
-    margin: 0.6vw 0;
-    font-size: 1.8vw;
+  text-align: center;
+  color: black;
+  margin: 0.6vw 0;
+  font-size: 1.8vw;
 }
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-    .prizes {
-        margin: 0 auto;
-        width: 90%;
-    }
+  .prizes {
+    margin: 0 auto;
+    width: 90%;
+  }
 
-    .section-title {
-        margin-bottom: 0.5rem;
-        font-size: 2rem;
-    }
+  .section-title {
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+  }
 
-    .prize__container {
-        box-shadow: 0 0.8rem #ffa6c7;
-        border-radius: 4rem;
-        padding: 2rem 1rem;
-    }
+  .prize__container {
+    box-shadow: 0 0.8rem #ffa6c7;
+    border-radius: 4rem;
+    padding: 2rem 1rem;
+  }
 
-    .prize__list {
-        display: block;
-    }
+  .prize__list {
+    display: block;
+  }
 
-    .prize {
-        width: 49%;
-        margin: auto;
-    }
+  .prize {
+    width: 49%;
+    margin: auto;
+  }
 
-    .prize__image {
-        height: 120px;
-        width: 120px;
-    }
+  .prize__image {
+    height: 120px;
+    width: 120px;
+  }
 
-    .prize-category {
-        font-size: 1.2rem;
-        margin: 0.5rem 0;
-        height: auto;
-    }
+  .prize-category {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    height: auto;
+  }
 
-    .prize-amount {
-        font-size: 1.2rem;
-        margin: 0;
-        margin-bottom: 1.5rem;
-    }
+  .prize-amount {
+    font-size: 1.2rem;
+    margin: 0;
+    margin-bottom: 1.5rem;
+  }
 }
 
 @media only screen and (min-device-width:768px) and (max-device-width:800px) {
-    .prizes {
-        margin: 2rem auto;
-        width: 65%;
-    }
+  .prizes {
+    margin: 2rem auto;
+    width: 90%;
+  }
 
-    .section-title {
-        margin-bottom: 0.5rem;
-        font-size: 4rem;
-    }
+  .section-title {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+  }
 
-    .prize__container {
-        box-shadow: 0 1.2rem #ffa6c7;
-        border-radius: 6rem;
-        padding: 5rem 1rem;
-    }
+  .prize__container {
+    border-radius: 6rem;
+    padding: 3rem 1rem;
+    box-shadow: 0 1.2rem #ffa6c7;
+  }
 
-    .prize__list {
-        display: block;
-        width: 100%;
-    }
+  .prize__list {
+    display: block;
+  }
 
-    .prize {
-        width: 100%;
-        margin: auto;
-    }
+  .prize {
+    width: 50%;
+    margin: auto;
+  }
 
-    .prize__image {
-        height: 250px;
-        width: 250px;
-    }
+  .prize__image {
+    height: 200px;
+    width: 200px;
+  }
 
-    .prize-category {
-        font-size: 2.5rem;
-        margin: 1rem 0;
-        margin-bottom: 0;
-        height: auto;
-    }
+  .prize-category {
+    font-size: 2rem;
+    margin: 1rem 0;
+    margin-bottom: 0;
+    height: auto;
+  }
 
-    .prize-amount {
-        font-size: 2.5rem;
-        margin: 0.5rem 0;
-        margin-bottom: 2rem;
-    }
+  .prize-amount {
+    font-size: 2rem;
+    margin: 0.5rem 0;
+    margin-bottom: 2rem;
+  }
 }
 </style>
