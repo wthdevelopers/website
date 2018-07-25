@@ -232,13 +232,13 @@ export default {
     grid-row: 6 / span 2;
   }
 
-  .subContainer:nth-child(7) {
+  .subContainer:nth-child(7) { /* FAQs */
     margin-top: 6vw;
     grid-column: 1 / span 2;
     grid-row: 8 / span 2;
   }
 
-  .subContainer:nth-child(8) { /* index */
+  .subContainer:nth-child(8) { /* Index */
     margin-top: 6vw;
     grid-column: 1 / span 2;
     grid-row: 10 / span 2;
@@ -283,10 +283,6 @@ export default {
       margin-top: 4rem;
     }
 
-    .subContainer:nth-child(3) > section {
-      width: 90%;
-    }
-
     .subContainer:nth-child(4) { /* Schedule */
       width: 100%;
       margin-top: 4rem;
@@ -304,6 +300,22 @@ export default {
     .subContainer:nth-child(5) > section {
       width: 90%;
     }
+
+    .subContainer:nth-child(6) { /* Sponsor */
+      width: 100%;
+      margin-top: 4rem;
+    }
+
+    .subContainer:nth-child(7) { /* FAQs */
+      width: 100%;
+      margin-top: 4rem;
+    }
+
+    .subContainer:nth-child(8) { /* Index */
+      width: 100%;
+      margin-top: 4rem;
+    }
+    
   }
 
   @media only screen and (min-device-width:768px) and (max-device-width:800px) {
@@ -355,6 +367,21 @@ export default {
     }
 
     .subContainer:nth-child(5) { /* Prizes */
+      margin-top: 5rem;
+      grid-area: unset;
+    }
+
+    .subContainer:nth-child(6) { /* Sponsor */
+      margin-top: 5rem;
+      grid-area: unset;
+    }
+
+    .subContainer:nth-child(7) { /* FAQs */
+      margin-top: 5rem;
+      grid-area: unset;
+    }
+
+    .subContainer:nth-child(8) { /* Index */
       margin-top: 5rem;
       grid-area: unset;
     }

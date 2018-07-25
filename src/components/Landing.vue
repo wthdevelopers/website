@@ -101,6 +101,27 @@ export default {
   background: linear-gradient(-45deg, #ffa6c7 40%, #6eadff 60%);
   -webkit-mask-box-image: -webkit-radial-gradient(white 40%, transparent 70%);
   border-radius: 50%;
+  animation: rotate_background 0.3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rotate_background {
+  0% {
+    background: linear-gradient(-45deg, #ffa6c7 40%, #6eadff 60%);
+  }
+  25% {
+    background: linear-gradient(-135deg, #ffa6c7 40%, #6eadff 60%);
+  }
+  50% {
+    background: linear-gradient(-225deg, #ffa6c7 40%, #6eadff 60%);
+  }
+  75% {
+    background: linear-gradient(-315deg, #ffa6c7 40%, #6eadff 60%);
+  }
+  100% {
+    background: linear-gradient(-45deg, #ffa6c7 40%, #6eadff 60%);
+  }
 }
 
 .backdrop {
@@ -329,6 +350,7 @@ export default {
     top: 30%;
     left: calc((100% - 270px) / 2);
     width: 270px;
+    height: 100px;
   }
 
   .theme {
@@ -341,12 +363,17 @@ export default {
 
   .theme__items{
     font-size: 1rem;
-    top: 35%;
+    top: 30%;
     left: 0%;
   }
 
   .theme__item{
     text-align: center;
+    margin: 0.5rem 0;
+  }
+  
+  .theme__item--register {
+    margin: 2rem 0rem;
   }
 
   .theme__item--register a {

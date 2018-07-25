@@ -61,18 +61,12 @@ h2 {
   margin-top: 2vw;
 }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-  .sponsor {
-    padding: 20px 20px 20px 20px;
-    align-content: center;
-  }
-}
-.sponsors{
+.sponsors {
   font-family: 'Nunito', sans-serif;
   text-align: center;
 }
 
-.sponsor{
+.sponsor {
   height: 23vw;
   width: 23vw;
   margin: 2vw;
@@ -85,16 +79,53 @@ h2 {
 .round {
   /* Safari 3-4, iOS 1-3.2, Android 1.6- */
   -webkit-border-radius: 6vw;
-
   /* Firefox 1-3.6 */
   -moz-border-radius: 6vw;
-
   /* Opera 10.5, IE 9, Safari 5, Chrome, Firefox 4, iOS 4, Android 2.1+ */
   border-radius: 6vw;
 }
+
 .shadow {
   -moz-box-shadow:    0 1.2vw #a3d6f3;
   -webkit-box-shadow: 0 1.2vw #a3d6f3;
   box-shadow:         0 1.2vw #a3d6f3;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .sponsors {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .sponsor {
+    height: 8.5em;
+    width: 8.5rem;
+    margin: 0 auto;
+    align-content: center;
+    margin: 0.5rem;
+  }
+
+  #h1b {
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+    margin: 0.5rem auto;
+  }
+
+  .round {
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    border-radius: 2rem;
+  }
+
+  .shadow {
+    -moz-box-shadow:    0 0.5rem #a3d6f3;
+    -webkit-box-shadow: 0 0.5rem #a3d6f3;
+    box-shadow:         0 0.5rem #a3d6f3;
+  }
+
 }
 </style>

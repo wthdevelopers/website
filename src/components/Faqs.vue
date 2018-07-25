@@ -113,10 +113,6 @@ export default {
     font-size: 1.8vw;
   }
 
-  .faq_questions {
-
-  }
-
   .question__container {
     background-color: #fff7f8;
     vertical-align: middle;
@@ -156,5 +152,30 @@ export default {
   .rotate {
     transition: transform 0.5s ease-in-out;
     transform: rotate(180deg);
+  }
+
+  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    .faqs {
+      margin: 0 auto;
+      width: 90%;
+    }
+
+    .faq-title {
+      font-size: 2rem;
+      margin: 0.5rem auto;
+    }
+
+    .faq__container {
+      font-size: 1rem;
+      border-radius: 3rem;
+      padding: 1.5rem 1rem;
+      text-align: left;
+      box-shadow: 0 0.8rem #ffa6c7;
+    }
+
+    .question__container {
+      border-radius: 0.5rem;
+      margin: 0.5rem 0;
+    }
   }
 </style>

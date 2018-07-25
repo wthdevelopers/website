@@ -62,6 +62,8 @@ export default {
 
 .prize {
     width: 16.5vw;
+    display: inline-block;
+    vertical-align: top;
 }
 
 .prize__image {
@@ -87,44 +89,43 @@ export default {
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
     .prizes {
-        margin: 2rem auto;
-        width: 100%;
+        margin: 0 auto;
+        width: 90%;
     }
 
     .section-title {
         margin-bottom: 0.5rem;
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     .prize__container {
-        box-shadow: 0 1.2rem #ffa6c7;
+        box-shadow: 0 0.8rem #ffa6c7;
         border-radius: 4rem;
-        padding: 4rem 1rem;
+        padding: 2rem 1rem;
     }
 
     .prize__list {
         display: block;
-        width: 100%;
     }
 
     .prize {
-        width: 100%;
+        width: 49%;
         margin: auto;
     }
 
     .prize__image {
-        height: 150px;
-        width: 150px;
+        height: 120px;
+        width: 120px;
     }
 
     .prize-category {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         margin: 0.5rem 0;
         height: auto;
     }
 
     .prize-amount {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         margin: 0;
         margin-bottom: 1.5rem;
     }

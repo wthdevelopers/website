@@ -137,27 +137,27 @@ export default {
     @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
         .schedule__table {
             margin: 0 auto;
-            width: 100%;
+            width: 90%;
         }
 
         .table__title {
-            font-size: 2.5rem;
+            font-size: 2em;
             margin-bottom: 0.5rem;
         }
 
         .table__container {
-            box-shadow: 0 1.2rem #a3d6f3;
+            box-shadow: 0 0.8rem #a3d6f3;
             font-size: 1.2rem;
             border-radius: 4rem;
         }
         
         th {
-            height: 5rem;
+            height: 4rem;
             padding-bottom: 0.2rem;
         }
 
         th.table__header:first-child {
-            border-top-left-radius: 4rem; /* Change mobileradius to 4rem*/
+            border-top-left-radius: 4rem;
             padding-left: 1.2rem;
 
         }
@@ -181,7 +181,7 @@ export default {
         }
 
         td {
-            line-height: 1.5rem;
+            line-height: 1.2rem;
         }
 
         td:first-child {

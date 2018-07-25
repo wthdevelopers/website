@@ -58,7 +58,7 @@ export default {
     margin: 0;
     padding: 0;
     text-align: center;
-    display: inline-block;
+    display: block;
 }
 
 .theme {
@@ -85,18 +85,18 @@ export default {
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
     .themes {
         margin: 0 auto;
-        width: 100%;
+        width: 90%;
     }
 
     .section-title {
         margin-bottom: 0.5rem;
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     .theme__container {
         border-radius: 4rem;
-        padding: 4rem 1rem;
-        box-shadow: 0 1.2rem #ffa6c7;
+        padding: 2rem 1rem;
+        box-shadow: 0 0.8rem #ffa6c7;
     }
 
     .theme__list {
@@ -104,18 +104,19 @@ export default {
     }
 
     .theme {
-        width: 100%;
+        width: 49%;
         margin: auto;
     }
 
     .theme__image {
-        height: 150px;
-        width: 150px;
+        height: 120px;
+        width: 120px;
     }
 
     .theme-category {
         margin: 0.5rem 0;
-        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+        font-size: 1.2rem;
     }
 }
 
