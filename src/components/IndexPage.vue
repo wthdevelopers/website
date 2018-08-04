@@ -4,9 +4,6 @@
   <div id="Backdrop1">
     <Backdrop ID="backdrop1"></Backdrop>
   </div>
-  <div id="Backdrop2">
-    <Backdrop ID="backdrop2"></Backdrop>
-  </div>
   <section class="VRCat__container">
     <div class="VRCat">
         <VRCat></VRCat>
@@ -161,16 +158,12 @@ export default {
     box-sizing: border-box;
   }
 
-  #Backdrop1, #Backdrop2 {
-    width: 10%;
+  #Backdrop1 {
+    width: 100%;
     height: 100%;
     position: fixed;
     top: 0;
     z-index: -1;
-  }
-
-  #Backdrop2 {
-    left: 90%;
   }
 
   .VRCat__container {
@@ -184,6 +177,8 @@ export default {
     top: 11vw;
     left: calc((100vw - 15vw) / 2 + 1.5vw);
     width: 15vw;
+    background: white;
+    border-radius: 15vw;
   }
 
   .filler {
@@ -265,7 +260,7 @@ export default {
   }
 
   @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-    #Backdrop1 , #Backdrop2 {
+    #Backdrop1 {
       display: none;
     }
 
@@ -343,7 +338,7 @@ export default {
   }
 
   @media only screen and (min-device-width:768px) and (max-device-width:800px) {
-    #Backdrop1 , #Backdrop2 {
+    #Backdrop1 {
       display: none;
     }
 
