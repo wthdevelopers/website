@@ -15,22 +15,22 @@
     </div>
     <nav class="nav">
       <ul class="nav__items">
-        <li class="nav__item"><a href="#About">About</a></li>
-        <li class="nav__item"><a href="#Schedule">Schedule</a></li>
-        <li class="nav__item"><a href="#Prizes">Prizes</a></li>
-        <li class="nav__item"><a href="#Sponsors">Sponsors</a></li>
-        <li class="nav__item"><a href="#FAQ">FAQs</a></li>
+        <li class="nav__item"><a class="About" href="#">About</a></li>
+        <li class="nav__item"><a class="Schedule" href="#">Schedule</a></li>
+        <li class="nav__item"><a class="Prizes" href="#">Prizes</a></li>
+        <li class="nav__item"><a class="Sponsors" href="#">Sponsors</a></li>
+        <li class="nav__item"><a class="FAQ" href="#">FAQs</a></li>
         <li class="nav__item nav__item--register"><a href="#">Register</a></li>
       </ul>
     </nav>
   </header>
   <nav class="mobile-nav">
     <ul class="mobile-nav__items">
-      <li class="mobile-nav__item"><a href="#About">About</a></li>
-      <li class="mobile-nav__item"><a href="#Schedule">Schedule</a></li>
-      <li class="mobile-nav__item"><a href="#Prizes">Prizes</a></li>
-      <li class="mobile-nav__item"><a href="#Sponsors">Sponsors</a></li>
-      <li class="mobile-nav__item"><a href="#FAQ">FAQs</a></li>
+      <li class="mobile-nav__item"><a class="About" href="#">About</a></li>
+      <li class="mobile-nav__item"><a class="Schedule" href="#">Schedule</a></li>
+      <li class="mobile-nav__item"><a class="Prizes" href="#">Prizes</a></li>
+      <li class="mobile-nav__item"><a class="Sponsors" href="#">Sponsors</a></li>
+      <li class="mobile-nav__item"><a class="FAQ" href="#">FAQs</a></li>
     </ul>
   </nav>
   <div class="main-logo">
@@ -73,6 +73,15 @@ export default {
       setTimeout(function() {
         backdrop.classList.add("open");
       }, 10);
+    });
+
+    addEventListener('click', function (event) {
+      var id_name = event.target.classList.value;
+      var el = document.getElementById(id_name);
+      if (event.target.classList.length > 0) {
+        event.preventDefault();
+        el.scrollIntoView();
+      }   
     });
   }
 }
