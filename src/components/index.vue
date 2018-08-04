@@ -41,17 +41,20 @@ export default {
 h1 {
   font-size: 3.5vw;
   font-family: 'Quicksand', sans-serif;
-  margin: 0;
+  margin: 0 auto;
+  background: white;
+  border-radius: 5vw;
 }
 
 #h1a {
   color: #ff7bac;
-  margin: 0;
   margin-bottom: 1.2vw;
+  width: 30%
 }
 
 #h1b {
   color: #6eadff;
+  width: 20%;
   margin-top: 6vw;
   margin-bottom: 1.2vw;
 }
@@ -103,10 +106,16 @@ footer {
   margin: 0 auto;
   display: inline-block;
   text-align: left;
+  background: white;
+  border-radius: 1vw 10vw 10vw 1vw;
 }
 
 .contact {
+  width: 45%;
+  margin: 0 auto;
   margin-top: 2vw;
+  background: white;
+  border-radius: 10vw;
 }
 
 @media only screen and (min-device-width : 320px) and (max-device-width: 480px) {
@@ -115,9 +124,15 @@ footer {
     width: 90%;
   }
 
+  h1 {
+    background: unset;
+    border-radius: unset;
+  }
+
   #h1a {
     font-size: 2rem;
     margin-bottom: 0.5rem;
+    width: 100%;
   }
 
   .map {
@@ -126,6 +141,14 @@ footer {
 
   .direction {
     width: 100%;
+    background: unset;
+    border-radius: unset;
+  }
+
+  .contact {
+    width: 100%;
+    background: unset;
+    border-radius: unset;
   }
 
   p {
@@ -138,6 +161,7 @@ footer {
     font-size: 2rem;
     margin-top: 4rem;
     margin-bottom: 0.5rem;
+    width: 100%;
   }
 
   footer {
@@ -150,9 +174,15 @@ footer {
     width: 90%;
   }
 
+  h1 {
+    background: unset;
+    border-radius: unset;
+  }
+
   #h1a {
     font-size: 3.5rem;
     margin-bottom: 0.5rem;
+    width: 100%;
   }
 
   .map {
@@ -167,6 +197,14 @@ footer {
 
   .direction {
     width: 100%;
+    background: unset;
+    border-radius: unset;
+  }
+
+  .contact {
+    width: 100%;
+    background: unset;
+    border-radius: unset;
   }
 
   p {
@@ -179,6 +217,7 @@ footer {
     font-size: 3.5rem;
     margin-top: 5rem;
     margin-bottom: 1rem;
+    width: 100%;
   }
 
   footer {
