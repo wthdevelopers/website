@@ -38,10 +38,13 @@ export default {
 .section-title {
   font-family: 'Quicksand', sans-serif;
   font-size: 3.5vw;
-  margin: 0;
+  margin: 0 auto;
   margin-bottom: 1.2vw;
   color: #ff7bac;
   text-align: center;
+  background: white;
+  border-radius: 5vw;
+  width: 40%;
 }
 
 .theme__container {
@@ -76,7 +79,7 @@ export default {
 
 .theme-category {
   text-align: center;
-  font-size: 1.8vw;
+  font-size: 1.7vw;
   font-weight: bold;
   color: black;
   margin: 1.2vw auto;
@@ -91,6 +94,9 @@ export default {
   .section-title {
     margin-bottom: 0.5rem;
     font-size: 2rem;
+    background: unset;
+    border-radius: unset;
+    width: 100%;
   }
 
   .theme__container {
@@ -129,6 +135,9 @@ export default {
   .section-title {
     font-size: 3.5rem;
     margin-bottom: 0.5rem;
+    background: unset;
+    border-radius: unset;
+    width: 100%;
   }
 
   .theme__container {

@@ -66,12 +66,15 @@ export default {
   font-size: 3.5vw;
   text-align: center;
   color: #ff7bac;
+  margin: 0 auto;
   margin-bottom: 1.2vw;
+  background: white;
+  border-radius: 5vw;
 }
 
 .text__container--content {
   font-family: 'Nunito', sans-serif;
-  font-size: 1.8vw;
+  font-size: 1.7vw;
   text-align: justify;
   padding: 1.8vw;
   background-color: #fcfcfc;
@@ -92,7 +95,8 @@ export default {
   .text__container--title {
     font-size: 1.5rem;
     text-align: left;
-    margin: 0;
+    background: unset;
+    border-radius: unset;
   }
 
   .text__container--content {
@@ -109,6 +113,8 @@ export default {
     font-size: 3rem;
     margin-bottom: 0.5rem;
     text-align: center;
+    background: unset;
+    border-radius: unset;
   }
 
   .text__container--content {

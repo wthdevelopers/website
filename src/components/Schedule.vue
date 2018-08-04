@@ -63,10 +63,13 @@ export default {
     font-family: 'Quicksand', sans-serif;
     font-size: 3.5vw;
     text-align: center;
-    margin: auto;
+    margin: 0 auto;
     padding: 0;
     color: #6eadff;
     margin-bottom: 1.2vw;
+    background: white;
+    border-radius: 5vw;
+    width: 45%;
   }
 
   .table__container {
@@ -78,7 +81,7 @@ export default {
     border-collapse: collapse;
     box-shadow: -1.2vw 1.2vw #a3d6f3;
     text-align: left;
-    font-size: 1.8vw;
+    font-size: 1.7vw;
     margin: 0;
   }
 
@@ -143,6 +146,9 @@ export default {
     .table__title {
       font-size: 2em;
       margin-bottom: 0.5rem;
+      background: unset;
+      border-radius: unset;
+      width: 100%;
     }
 
     .table__container {
@@ -202,6 +208,9 @@ export default {
     .table__title {
       font-size: 3.5rem;
       margin-bottom: 0.5rem;
+      background: unset;
+      border-radius: unset;
+      width: 100%;
     }
     
     .table__container {

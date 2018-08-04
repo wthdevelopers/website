@@ -47,7 +47,10 @@ export default {
 h1 {
   font-size: 3.5vw;
   font-family: 'Quicksand', sans-serif;
-  margin: 0;
+  margin: 0 auto;
+  background: white;
+  border-radius: 5vw;
+  width: 20%;
 }
 
 #h1b {
@@ -55,10 +58,13 @@ h1 {
 }
 
 h2 {
-  font-size: 1.8vw;
+  font-size: 2.5vw;
   font-family: 'Nunito', sans-serif;
   margin: 1.2vw auto;
   margin-top: 2vw;
+  background: white;
+  border-radius: 5vw;
+  width: 20%;
 }
 
 .sponsors {
@@ -92,6 +98,12 @@ h2 {
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  h1 {
+    background: unset;
+    border-radius: unset;
+    width: 100%;
+  }
+
   .sponsors {
     width: 100%;
     margin: 0 auto;
@@ -113,6 +125,9 @@ h2 {
   h2 {
     font-size: 1.2rem;
     margin: 0.5rem auto;
+    background: unset;
+    border-radius: unset;
+    width: 100%;
   }
 
   .round {
@@ -129,6 +144,12 @@ h2 {
 }
 
 @media only screen and (min-device-width:768px) and (max-device-width:800px) {
+  h1 {
+    background: unset;
+    border-radius: unset;
+    width: 100%;
+  }
+
   .sponsors {
     width: 100%;
     margin: 0 auto;
@@ -151,6 +172,9 @@ h2 {
     font-size: 2.5rem;
     margin: 1.5rem auto;
     margin-bottom: 1rem;
+    background: unset;
+    border-radius: unset;
+    width: 100%;
   }
 
   .round {

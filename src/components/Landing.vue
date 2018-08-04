@@ -378,7 +378,6 @@ export default {
     height: 100vh;
   }
 
-
   .canvas-small {
     top: 25%;
     left: calc((100% - 80vw) / 2);
@@ -404,7 +403,7 @@ export default {
   }
 
   .nav__item a {
-    font-size: 2.8vw;
+    font-size: 3vw;
   }
 
   .main-logo {

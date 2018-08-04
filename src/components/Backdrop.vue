@@ -102,7 +102,7 @@ export default {
     // Math.floor(Math.random() * 11)
     for(var x = 0; x < Canvas.width; x++) {
         for(var y = 0; y < Canvas.height; y++) {
-            if(Math.round(Math.random() * 3000) == 1) {
+            if(Math.round(Math.random() * 8000) == 1) { // Change the value to adjust the density of the particles
                 var s = (Math.random() * 6) / 10;
                 if(Math.round(Math.random()) == 1)
                     elements.push(presets.o(x, y, s, 0, 0));

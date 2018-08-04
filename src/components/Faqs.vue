@@ -99,8 +99,11 @@ export default {
     text-align: center;
     padding: 0;
     color: #ff7bac;
-    margin: 0;
+    margin: 0 auto;
     margin-bottom: 1.2vw;
+    background: white;
+    border-radius: 5vw;
+    width: 15%;
   }
 
 
@@ -110,7 +113,7 @@ export default {
     box-shadow: 0 1.2vw #ffa6c7;
     border-radius: 6vw;
     padding: 4.5vw 1.2vw;
-    font-size: 1.8vw;
+    font-size: 1.7vw;
   }
 
   .question__container {
@@ -163,6 +166,9 @@ export default {
     .faq-title {
       font-size: 2rem;
       margin-bottom: 0.5rem;
+      background: unset;
+      border-radius: unset;
+      width: 100%;
     }
 
     .faq__container {
@@ -188,6 +194,9 @@ export default {
     .faq-title {
       font-size: 3.5rem;
       margin-bottom: 0.5rem;
+      background: unset;
+      border-radius: unset;
+      width: 100%;
     }
 
     .faq__container {

@@ -37,10 +37,13 @@ export default {
 .section-title {
   font-family: 'Quicksand', sans-serif;
   font-size: 3.5vw;
-  margin: 0;
+  margin: 0 auto;
   color: #ff7bac;
   text-align: center;
   margin-bottom: 1.2vw;
+  background: white;
+  border-radius: 5vw;
+  width: 15%;
 }
 
 .prize__container {
@@ -76,7 +79,7 @@ export default {
   text-align: center;
   color: black;
   margin: 1vw 0;
-  font-size: 1.8vw;
+  font-size: 1.7vw;
   height: 7vw;
 }
 
@@ -84,7 +87,7 @@ export default {
   text-align: center;
   color: black;
   margin: 0.6vw 0;
-  font-size: 1.8vw;
+  font-size: 1.7vw;
 }
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
@@ -96,6 +99,9 @@ export default {
   .section-title {
     margin-bottom: 0.5rem;
     font-size: 2rem;
+    background: unset;
+    border-radius: unset;
+    width: 100%;
   }
 
   .prize__container {
@@ -140,6 +146,9 @@ export default {
   .section-title {
     font-size: 3.5rem;
     margin-bottom: 0.5rem;
+    background: unset;
+    border-radius: unset;
+    width: 100%;
   }
 
   .prize__container {
