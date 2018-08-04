@@ -1,5 +1,5 @@
 <template>
-  <canvas id="canvas"></canvas>
+  <canvas :id="this.ID" :style="setMaxSize"></canvas>
 </template>
 
 
@@ -7,8 +7,17 @@
 
 export default {
   name: 'Backdrop',
+  props: [ 'ID' ],
+  computed: {
+    setMaxSize: function() {
+      return {
+        'width': '100%',
+        'height': '100%'
+      }
+    }
+  },
   mounted() {
-    var Canvas = document.getElementById('canvas');
+    var Canvas = document.getElementById(this.ID);
     var ctx = Canvas.getContext('2d');
 
     var resize = function() {
@@ -115,11 +124,3 @@ export default {
 }
 
 </script>
-
-<style scoped>
-
-#canvas {
-  width: 100%;
-  height: 100%;
-}
-</style>

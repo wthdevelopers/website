@@ -1,6 +1,12 @@
 <template>
 <div class="container">
   <Landing></Landing>
+  <div id="Backdrop1">
+    <Backdrop ID="backdrop1"></Backdrop>
+  </div>
+  <div id="Backdrop2">
+    <Backdrop ID="backdrop2"></Backdrop>
+  </div>
   <section class="VRCat__container">
     <div class="VRCat">
         <VRCat></VRCat>
@@ -52,6 +58,7 @@ import VRCat from '@/components/VRCat.vue'
 import Sponsor from '@/components/sponsor.vue'
 import index from '@/components/index.vue'
 import Faqs from '@/components/Faqs.vue'
+import Backdrop from '@/components/Backdrop.vue'
 
 export default {
   components: {
@@ -63,7 +70,8 @@ export default {
     'VRCat': VRCat,
     'Sponsor': Sponsor,
     'Index': index,
-    'Faqs': Faqs
+    'Faqs': Faqs,
+    'Backdrop': Backdrop
   },
   data:()=>{
     return{
@@ -153,6 +161,18 @@ export default {
     box-sizing: border-box;
   }
 
+  #Backdrop1, #Backdrop2 {
+    width: 10%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    z-index: -1;
+  }
+
+  #Backdrop2 {
+    left: 90%;
+  }
+
   .VRCat__container {
     display: inline;
     position: relative;
@@ -162,7 +182,7 @@ export default {
     display: inline-block;
     position: absolute;
     top: 11vw;
-    left: calc((100vw - 15vw) / 2 + 2.5vw);
+    left: calc((100vw - 15vw) / 2 + 1.5vw);
     width: 15vw;
   }
 
@@ -183,7 +203,7 @@ export default {
   }
 
   .container__info {
-    margin: 5vw 8vw;
+    margin: 8vw 8vw;
     display: grid;
     grid-template-columns: repeat(2, calc((100vw - 16vw - 5vw) / 2));
     grid-template-rows: repeat(12, auto);
@@ -245,6 +265,10 @@ export default {
   }
 
   @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    #Backdrop1 , #Backdrop2 {
+      display: none;
+    }
+
     .VRCat {
       top: 15rem;
       left: 65vw;
@@ -319,6 +343,10 @@ export default {
   }
 
   @media only screen and (min-device-width:768px) and (max-device-width:800px) {
+    #Backdrop1 , #Backdrop2 {
+      display: none;
+    }
+
     .VRCat {
       top: 20rem;
       left: 67vw;
