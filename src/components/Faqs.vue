@@ -64,9 +64,11 @@ export default {
       var child_class = arrow.classList;
       if(child_class.contains("rotate")) {
         arrow.classList.remove("rotate");
+        (self.$refs.arrow)[answer_id].color = self.arrowAltColor;
       }
       else {
         arrow.classList.add("rotate");
+        (self.$refs.arrow)[answer_id].color = self.arrowAltColor;
       }
       setTimeout(function() {
         self.$refs.answer[answer_id].hidden = !self.$refs.answer[answer_id].hidden;
