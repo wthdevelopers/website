@@ -59,6 +59,7 @@ export default {
     var backdrop = document.querySelector(".backdrop");
     var mobileNav = document.querySelector(".mobile-nav");
     var toggleButton = document.querySelector(".toggle-button");
+    var nav = document.querySelector(".nav")
 
     backdrop.addEventListener("click", function() {
       mobileNav.classList.remove("open");
@@ -75,7 +76,16 @@ export default {
       }, 10);
     });
 
-    addEventListener('click', function (event) {
+    mobileNav.addEventListener('click', function (event) {
+      var id_name = event.target.classList.value;
+      var el = document.getElementById(id_name);
+      if (event.target.classList.length > 0) {
+        event.preventDefault();
+        el.scrollIntoView();
+      }   
+    });
+
+    nav.addEventListener('click', function (event) {
       var id_name = event.target.classList.value;
       var el = document.getElementById(id_name);
       if (event.target.classList.length > 0) {
