@@ -260,10 +260,6 @@ export default {
   }
 
   @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-    #Backdrop1 {
-      display: none;
-    }
-
     .VRCat {
       top: 15rem;
       left: 65vw;
@@ -338,10 +334,6 @@ export default {
   }
 
   @media only screen and (min-device-width:768px) and (max-device-width:800px) {
-    #Backdrop1 {
-      display: none;
-    }
-
     .VRCat {
       top: 20rem;
       left: 67vw;

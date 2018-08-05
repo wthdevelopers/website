@@ -124,15 +124,10 @@ footer {
     width: 90%;
   }
 
-  h1 {
-    background: unset;
-    border-radius: unset;
-  }
-
   #h1a {
     font-size: 2rem;
     margin-bottom: 0.5rem;
-    width: 100%;
+    width: 65%;
   }
 
   .map {
@@ -141,14 +136,12 @@ footer {
 
   .direction {
     width: 100%;
-    background: unset;
-    border-radius: unset;
+    border-radius: 0.8rem;
   }
 
   .contact {
     width: 100%;
-    background: unset;
-    border-radius: unset;
+    border-radius: 0.8rem;
   }
 
   p {
@@ -161,7 +154,7 @@ footer {
     font-size: 2rem;
     margin-top: 4rem;
     margin-bottom: 0.5rem;
-    width: 100%;
+    width: 50%;
   }
 
   footer {
@@ -174,15 +167,10 @@ footer {
     width: 90%;
   }
 
-  h1 {
-    background: unset;
-    border-radius: unset;
-  }
-
   #h1a {
     font-size: 3.5rem;
     margin-bottom: 0.5rem;
-    width: 100%;
+    width: 60%;
   }
 
   .map {
@@ -197,14 +185,12 @@ footer {
 
   .direction {
     width: 100%;
-    background: unset;
-    border-radius: unset;
+    border-radius: 0.8rem;
   }
 
   .contact {
     width: 100%;
-    background: unset;
-    border-radius: unset;
+    border-radius: 0.8rem;
   }
 
   p {
@@ -217,7 +203,7 @@ footer {
     font-size: 3.5rem;
     margin-top: 5rem;
     margin-bottom: 1rem;
-    width: 100%;
+    width: 40%;
   }
 
   footer {

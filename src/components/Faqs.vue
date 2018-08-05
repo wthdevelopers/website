@@ -168,9 +168,7 @@ export default {
     .faq-title {
       font-size: 2rem;
       margin-bottom: 0.5rem;
-      background: unset;
-      border-radius: unset;
-      width: 100%;
+      width: 30%;
     }
 
     .faq__container {
@@ -196,9 +194,7 @@ export default {
     .faq-title {
       font-size: 3.5rem;
       margin-bottom: 0.5rem;
-      background: unset;
-      border-radius: unset;
-      width: 100%;
+      width: 30%;
     }
 
     .faq__container {

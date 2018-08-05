@@ -146,9 +146,6 @@ export default {
     .table__title {
       font-size: 2em;
       margin-bottom: 0.5rem;
-      background: unset;
-      border-radius: unset;
-      width: 100%;
     }
 
     .table__container {
@@ -208,9 +205,6 @@ export default {
     .table__title {
       font-size: 3.5rem;
       margin-bottom: 0.5rem;
-      background: unset;
-      border-radius: unset;
-      width: 100%;
     }
     
     .table__container {

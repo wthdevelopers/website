@@ -94,9 +94,6 @@ export default {
   .section-title {
     margin-bottom: 0.5rem;
     font-size: 2rem;
-    background: unset;
-    border-radius: unset;
-    width: 100%;
   }
 
   .theme__container {
@@ -135,9 +132,6 @@ export default {
   .section-title {
     font-size: 3.5rem;
     margin-bottom: 0.5rem;
-    background: unset;
-    border-radius: unset;
-    width: 100%;
   }
 
   .theme__container {

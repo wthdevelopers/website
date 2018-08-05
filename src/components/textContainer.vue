@@ -113,8 +113,6 @@ export default {
     font-size: 3rem;
     margin-bottom: 0.5rem;
     text-align: center;
-    background: unset;
-    border-radius: unset;
   }
 
   .text__container--content {
