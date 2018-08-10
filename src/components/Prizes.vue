@@ -60,7 +60,7 @@ export default {
   padding: 0;
   text-align: center;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .prize {

@@ -92,24 +92,16 @@ export default {
         themes: {
           theme1: {
             image: 'FlippedCat.png',
-            theme: 'Education'
+            theme: 'EDUCATION'
           },
           theme2: {
             image: 'FlippedCat.png',
-            theme: 'Smart Cities'
+            theme: 'ART & DESIGN'
           },
           theme3: {
             image: 'FlippedCat.png',
-            theme: 'Art & Design'
-          },
-          theme4: {
-            image: 'FlippedCat.png',
-            theme: 'The Third World'
-          },
-          theme5: {
-            image: 'FlippedCat.png',
-            theme: 'Human Interaction'
-          },
+            theme: 'SMART CITIES'
+          }
         },
         prizes: {
           prize1: {
@@ -119,22 +111,12 @@ export default {
           },
           prize2: {
             image: 'FlippedCat.png',
-            category: 'BEST<br>HUMAN INTERACTION',
+            category: 'BEST<br>ART & DESIGN',
             amount: '$9999'
           },
           prize3: {
             image: 'FlippedCat.png',
-            category: 'BEST<br>ART & DESIGN',
-            amount: '$9999'
-          },
-          prize4: {
-            image: 'FlippedCat.png',
             category: 'BEST<br>SMART CITIES',
-            amount: '$9999'
-          },
-          prize5: {
-            image: 'FlippedCat.png',
-            category: 'BEST<br>THE THIRD WORLD',
             amount: '$9999'
           }
         }
@@ -189,8 +171,8 @@ export default {
   .filler__container {
     display: inline-block;
     position: absolute;
-    top: 100vw;
-    left: 60vw;
+    top: 90vw;
+    left: 65vw;
   }
   
   .filler__container img {
@@ -222,7 +204,7 @@ export default {
   }
   
   .subContainer:nth-child(3) { /* Theme */
-    margin-top: 6vw;
+    margin-top: 15vw;
     width: 100%;
     grid-column: 2 / span 1;
     grid-row: 2 / span 2;
@@ -263,7 +245,7 @@ export default {
     .VRCat {
       top: 15rem;
       left: 65vw;
-      height: 10vh;
+      height: 40vw;
       width: 30vw;
     }
 
@@ -337,7 +319,7 @@ export default {
     .VRCat {
       top: 20rem;
       left: 67vw;
-      height: 10vh;
+      height: 40vw;
       width: 30vw;
     }
 

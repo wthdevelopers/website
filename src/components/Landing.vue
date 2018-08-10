@@ -368,7 +368,7 @@ export default {
   }
 
   .theme__items{
-    font-size: 1rem;
+    font-size: 0.9rem;
     top: 30%;
     left: 0%;
   }
