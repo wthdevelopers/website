@@ -20,6 +20,7 @@ html, body {
 	width: 100%;
   margin: 0px;
   overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
 }
 
 #app {
