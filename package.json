@@ -8,7 +8,7 @@
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
     "build": "node build/build.js",
-    "deploy": "aws s3 sync ./dist s3://whatthehack.com"
+    "deploy": "aws s3 sync ./dist s3://www.sutdwth.com"
   },
   "dependencies": {
     "vue": "^2.5.2",
