@@ -87,7 +87,7 @@ export default {
         content2: {
           title: 'virtual // reality',
           content: 'This year’s theme is virtual reality but by no means are you restricted solely to VR and AR hacks!\
-                    The theme is divided into four categories, each with its own prize!'
+                    The theme is divided into three categories, each with its own prize!'
         },
         themes: {
           theme1: {
