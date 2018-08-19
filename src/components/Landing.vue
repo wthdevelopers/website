@@ -38,7 +38,7 @@
   </div>
   <div class="theme">virtual // reality</div>
     <ul class="theme__items">
-      <li class="theme__item">19 September - 20 September</li>
+      <li class="theme__item">28 September - 29 September</li>
       <li class="theme__item">Singapore University of Technology and Design</li>
       <li class="theme__item theme__item--register">
         <a href="https://tinyurl.com/sutdwthregister2018" target="_blank">Register</a>
