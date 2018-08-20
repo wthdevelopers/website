@@ -1,40 +1,42 @@
 <template>
   <div class="sponsors">
     <h1 id="h1b">Sponsors</h1>
-
     <div class="platinum">
       <h2>Platinum Tier</h2>
       <div class="parent">
-        <div class="sponsor round shadow"></div>
-        <div class="sponsor round shadow"></div>
-        <div class="sponsor round shadow"></div>
+        <div class="sponsor round shadow" v-for="platinium in platiniums">
+          <img :src="imgPath(platinium.image)" class="sponsor__image"></img>
+        </div>
       </div>
-  </div>
-
-  <div class="gold">
-    <h2>Gold Tier</h2>
-    <div class="parent">
-      <div class="sponsor round shadow"></div>
-      <div class="sponsor round shadow"></div>
-      <div class="sponsor round shadow"></div>
+    </div>
+    <div class="gold">
+      <h2>Gold Tier</h2>
+      <div class="parent">
+        <div class="sponsor round shadow" v-for="gold in golds">
+          <img :src="imgPath(gold.image)" class="sponsor__image"></img>
+        </div>
+      </div>
+    </div>
+    <div class="sliver">
+      <h2>Silver Tier</h2>
+      <div class="parent">
+        <div class="sponsor round shadow" v-for="silver in silvers">
+          <img :src="imgPath(silver.image)" class="sponsor__image"></img>
+        </div>
+      </div>
     </div>
   </div>
-
-  <div class="sliver">
-  <h2>Silver Tier</h2>
-  <div class="parent">
-    <div class="sponsor round shadow"></div>
-    <div class="sponsor round shadow"></div>
-    <div class="sponsor round shadow"></div>
-  </div>
-  </div>
-
-</div>
 </template>
 
 <script>
 export default {
-  name: 'sponsor'
+  name: 'sponsor',
+  props: ['platinums', 'golds', 'silvers'],
+  methods: {
+    imgPath: function(imgName) {
+      return require('@/assets/' + imgName)
+    }
+  }
 }
 </script>
 
@@ -97,6 +99,12 @@ h2 {
   box-shadow:         0 1.2vw #a3d6f3;
 }
 
+.sponsor__image {
+  height: 20vw;
+  width: 20vw;
+  margin: 2vw;
+}
+
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   h1 {
     width: 50%;
@@ -108,7 +116,7 @@ h2 {
   }
 
   .sponsor {
-    height: 8.5em;
+    height: 8.5rem;
     width: 8.5rem;
     align-content: center;
     margin: 0.5rem;
@@ -136,6 +144,12 @@ h2 {
     -moz-box-shadow:    0 0.5rem #a3d6f3;
     -webkit-box-shadow: 0 0.5rem #a3d6f3;
     box-shadow:         0 0.5rem #a3d6f3;
+  }
+
+  .sponsor__image {
+    height: 120px;
+    width: 120px;
+    margin: calc((8.5rem - 120px)/2) 0;
   }
 }
 
@@ -179,6 +193,12 @@ h2 {
     -moz-box-shadow:    0 0.8rem #a3d6f3;
     -webkit-box-shadow: 0 0.8rem #a3d6f3;
     box-shadow:         0 0.8rem #a3d6f3;
+  }
+
+  .sponsor__image {
+    height: 200px;
+    width: 200px;
+    margin: calc((35vw - 200px)/2) 0;
   }
 }
 </style>
