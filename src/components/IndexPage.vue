@@ -33,7 +33,7 @@
       <Prizes :prizes="prizes"></Prizes>
     </div>
     <div id="Sponsors" class="subContainer">
-      <Sponsor></Sponsor>
+      <Sponsor :platiniums="sponsors.platinum" :golds="sponsors.gold" :silvers="sponsors.silver"></Sponsor>
     </div>
     <div id="FAQ" class="subContainer">
       <Faqs></Faqs>
@@ -91,33 +91,54 @@ export default {
         },
         themes: {
           theme1: {
-            image: 'FlippedCat.png',
+            image: 'education.svg',
             theme: 'EDUCATION'
           },
           theme2: {
-            image: 'FlippedCat.png',
+            image: 'art_design.svg',
             theme: 'ART & DESIGN'
           },
           theme3: {
-            image: 'FlippedCat.png',
+            image: 'smart_cities.svg',
             theme: 'SMART CITIES'
           }
         },
         prizes: {
           prize1: {
-            image: 'FlippedCat.png',
-            category: 'BEST<br>EDUCATION',
-            amount: '$9999'
+            image: 'best_overall.svg',
+            category: 'BEST<br>OVERALL HACK',
+            amount: 'S$1000'
           },
           prize2: {
-            image: 'FlippedCat.png',
-            category: 'BEST<br>ART & DESIGN',
-            amount: '$9999'
+            image: 'best_vr.svg',
+            category: 'BEST<br>VR HACK',
+            amount: 'Trip to Shanghai<br>(Flight & Accomodation)<br>+<br>S$250'
           },
           prize3: {
             image: 'FlippedCat.png',
+            category: 'BEST<br>EDUCATION',
+            amount: 'S$250'
+          },
+          prize4: {
+            image: 'FlippedCat.png',
+            category: 'BEST<br>ART & DESIGN',
+            amount: 'S$250'
+          },
+          prize5: {
+            image: 'FlippedCat.png',
             category: 'BEST<br>SMART CITIES',
-            amount: '$9999'
+            amount: 'S$250'
+          }
+        },
+        sponsors: {
+          platinium: {
+          },
+          gold: {
+            gold1: {
+              image: 'htc.svg'
+            }
+          },
+          silver: {
           }
         }
       }
@@ -171,7 +192,7 @@ export default {
   .filler__container {
     display: inline-block;
     position: absolute;
-    top: 90vw;
+    top: 100vw;
     left: 65vw;
   }
   

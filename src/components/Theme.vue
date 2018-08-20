@@ -67,6 +67,7 @@ export default {
 .theme {
   width: 48%;
   margin: 0;
+  margin-top: 2vw;
   display: inline-block;
   vertical-align: top;
 }
@@ -119,7 +120,7 @@ export default {
   .theme-category {
     margin: 0.5rem 0;
     margin-bottom: 1.5rem;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 }
 

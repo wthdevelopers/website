@@ -6,7 +6,7 @@
         <li class="prize" v-for="prize in prizes">
           <img :src="imgPath(prize.image)" class="prize__image"></img>
           <h5 class="prize-category" v-html="prize.category"></h5>
-          <h5 class="prize-amount">{{ prize.amount }}</h5>
+          <h5 class="prize-amount" v-html="prize.amount"></h5>
         </li>
       </ul>
     </div>
@@ -80,14 +80,13 @@ export default {
   color: black;
   margin: 1vw 0;
   font-size: 1.7vw;
-  height: 7vw;
 }
 
 .prize-amount {
   text-align: center;
   color: black;
   margin: 0.6vw 0;
-  font-size: 1.7vw;
+  font-size: 1.5vw;
 }
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
@@ -123,13 +122,12 @@ export default {
   }
 
   .prize-category {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin: 0.5rem 0;
-    height: auto;
   }
 
   .prize-amount {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin: 0;
     margin-bottom: 1.5rem;
   }
@@ -171,13 +169,11 @@ export default {
     font-size: 2rem;
     margin: 1rem 0;
     margin-bottom: 0;
-    height: auto;
   }
 
   .prize-amount {
     font-size: 2rem;
-    margin: 0.5rem 0;
-    margin-bottom: 2rem;
+    margin: 2rem 0;
   }
 }
 </style>
