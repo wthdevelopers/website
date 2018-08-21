@@ -115,17 +115,17 @@ export default {
             amount: 'Trip to Shanghai<br>(Flight & Accomodation)<br>+<br>S$250'
           },
           prize3: {
-            image: 'FlippedCat.png',
+            image: 'education.svg',
             category: 'BEST<br>EDUCATION',
             amount: 'S$250'
           },
           prize4: {
-            image: 'FlippedCat.png',
+            image: 'art_design.svg',
             category: 'BEST<br>ART & DESIGN',
             amount: 'S$250'
           },
           prize5: {
-            image: 'FlippedCat.png',
+            image: 'smart_cities.svg',
             category: 'BEST<br>SMART CITIES',
             amount: 'S$250'
           }

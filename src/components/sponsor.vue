@@ -81,7 +81,6 @@ h2 {
   margin-top: 0;
   background-color: #dbebff;
   display: inline-block;
-
 }
 
 .round {
@@ -100,9 +99,9 @@ h2 {
 }
 
 .sponsor__image {
-  height: 20vw;
-  width: 20vw;
-  margin: 2vw;
+  height: auto;
+  width: auto;
+  margin: calc((23vw - 16vw)/2);
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
@@ -147,9 +146,9 @@ h2 {
   }
 
   .sponsor__image {
-    height: 120px;
-    width: 120px;
-    margin: calc((8.5rem - 120px)/2) 0;
+    height: 100px;
+    width: 100px;
+    margin: calc((8.5rem - 100px)/2) 0;
   }
 }
 
