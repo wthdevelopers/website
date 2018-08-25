@@ -12,7 +12,7 @@
     <div class="gold">
       <h2>Gold Tier</h2>
       <div class="parent">
-        <div class="sponsor round shadow" v-for="gold in golds">
+        <div class="sponsor round shadow" v-for="gold in golds" :style="addRatio(gold.hfactor, gold.wfactor)">
           <img :src="imgPath(gold.image)" class="sponsor__image"></img>
         </div>
       </div>
@@ -35,6 +35,27 @@ export default {
   methods: {
     imgPath: function(imgName) {
       return require('@/assets/' + imgName)
+    },
+    addRatio: function(hfactor, wfactor) {
+      if (window.screen.width >= 320 && window.screen.width <= 480) {
+        return {
+          'height': 'calc(100px * ' + hfactor + ')',
+          'width': 'calc(100px * ' + wfactor + ')'
+        }
+      }
+      else if (window.screen.width >= 768 && window.screen.width <= 800) {
+        return {
+          'height': 'calc(200px * ' + hfactor + ')',
+          'width': 'calc(200px * ' + wfactor + ')'
+        }
+      }
+      else {
+        return {
+          'height': 'calc(23vw * ' + hfactor + ')',
+          'width': 'calc(23vw * ' + wfactor + ')'
+        }
+
+      }
     }
   }
 }
@@ -62,7 +83,7 @@ h1 {
 h2 {
   font-size: 2.5vw;
   font-family: 'Nunito', sans-serif;
-  margin: 1.2vw auto;
+  margin: 0 auto;
   margin-top: 2vw;
   background: white;
   border-radius: 5vw;
@@ -78,9 +99,9 @@ h2 {
   height: 23vw;
   width: 23vw;
   margin: 2vw;
-  margin-top: 0;
   background-color: #dbebff;
   display: inline-block;
+  padding: 3.5vw;
 }
 
 .round {
@@ -99,9 +120,8 @@ h2 {
 }
 
 .sponsor__image {
-  height: auto;
-  width: auto;
-  margin: calc((23vw - 16vw)/2);
+  height: 100%;
+  width: 100%;
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
@@ -119,7 +139,7 @@ h2 {
     width: 8.5rem;
     align-content: center;
     margin: 0.5rem;
-    margin-top: 0;
+    padding: 1.2rem;
   }
 
   #h1b {
@@ -146,9 +166,8 @@ h2 {
   }
 
   .sponsor__image {
-    height: 100px;
-    width: 100px;
-    margin: calc((8.5rem - 100px)/2) 0;
+    height: 100%;
+    width: 100%;
   }
 }
 
@@ -167,7 +186,7 @@ h2 {
     width: 35vw;
     align-content: center;
     margin: 2rem;
-    margin-top: 0;
+    padding: 2.2rem;
   }
 
   #h1b {
@@ -195,9 +214,8 @@ h2 {
   }
 
   .sponsor__image {
-    height: 200px;
-    width: 200px;
-    margin: calc((35vw - 200px)/2) 0;
+    height: 100%;
+    width: 100%;
   }
 }
 </style>

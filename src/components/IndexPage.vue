@@ -135,7 +135,14 @@ export default {
           },
           gold: {
             gold1: {
-              image: 'htc.svg'
+              image: 'htc.svg',
+              hfactor: 1,
+              wfactor: 1,
+            },
+            gold2: {
+              image: 'AMD_logo.png',
+              hfactor: 1,
+              wfactor: 2.2
             }
           },
           silver: {
