@@ -29,16 +29,16 @@ export default {
     return {
       faqs: {
         // Use the template faq* or else the arrow and hidden answer will not work
-        faq1: ['Is this hackathon free?', 'Yes, this hackathon is free. All that we ask of you is for you to come down on the day itself!'],
-        faq2: ['Who can join this hackathon?', 'This competition is open to anybody 13 years old and above as at the date of the competition. Anyone below 18 years old will require his/her parent’s consent to participate in the competition. Please print out the consent and indemnity form which can be found <a href="https://goo.gl/1R61PZ" target="_blank"> here</a> for your parent’s signature and bring it on the day of the competition.'],
-        faq3: ['What does it mean by "Ideas are open to interpretation"?', 'It means that you can decide how you want to argue your stance. An example would be interpreting space as Outer Space (rockets, moon, planets) or Space in an architectural sense (a space we live in).'],
-        faq4: ['What is the maximum team size?', '4 members maximum.'],
-        faq5: ['What are my transport/parking options for getting to and from the event?', "If you are taking public transport, you can take bus 2 and 24 from Tanah Merah MRT and bus 5 from Simei MRT.<br>If you are driving, you can park in SUTD's basement carpark."],
-        faq6: ['What can I bring to the event?', 'Things like your laptops or any materials that you will need to create your prototype. We will provide basics like arduinos and some sensors to prototype your idea with.'],
-        faq7: ['How do we handle Intellectual Property (IP)?', 'Please refer to the Terms and Conditions of the Competition with regards to IP. You can download the Terms and Conditions <a href="http://bit.ly/wth2018tnc" target="_blank"> here.'],
-        faq8: ['What is Virtual // Realities?', 'No, <em>Virtual // Realities</em> emcompass all immersive realities technologies. This includes (Augmented Reality)AR, (Virtual Reality)VR and (Mixed Reality)MR.'],
-        faq9: ['Can I start ideating before the competition?', 'Yes, you can begin conceptualizing your ideas or planning your approach to the themes before the competition. However only work done on the prototype during the competition itself will be judged.'],
-        faq10: ['Where can I find the indemnity form?', 'Participants below the age of 18 will need their parent’s consent to participate in the competition. Thus, they will need to submit the consent and indemnity form signed by their parent/guardian at the registration counter on the day of the competition. For all other participants, we will provide the forms for your signature at the registration counter on the day of the competition itself! You can download the indemnity form from <a href="https://goo.gl/1R61PZ" target="_blank"> here</a>.'],
+        faq1: ['What is <b><i>Immersive Realities</i></b>?', 'An umbrella term we use to describe <a href="https://goo.gl/1R61PZ" target="_blank">Extended Realities</a>, while including any other realities you want to define!'],
+        faq2: ['Who can join this hackathon?', 'This competition is open to anybody 13 years old and above as at the date of the competition. Anyone below 18 years old will require his/her parent’s consent to participate in the competition. Please print out the <a href="https://goo.gl/1R61PZ" target="_blank">consent and indemnity form</a> for your parent’s signature and bring it on the day of the competition.'],
+        faq3: ["I'm below 18. Where can I find the indemnity form?", "Participants below the age of 18 will need their parent’s consent to participate in the competition. Thus, they will need to submit the consent and indemnity form signed by their parent/guardian at the registration counter on the day of the competition. For all other participants, we will provide the forms for your signature at the registration counter on the day of the competition itself! You can download the indemnity form from <a href='https://goo.gl/1R61PZ' target='_blank'> here</a>."],
+        faq4: ['Are the themes open to interpretation?', 'Yes, you can decide how you want to define your problem statement. If you are unsure of any ideas, you may approach the organizers for clarification at the hackathon!'],
+        faq5: ['What is the maximum team size?', '4 members maximum.'],
+        faq6: ['What are my transport/parking options for getting to and from the event?', "If you are taking public transport, you can take bus 2 and 24 from Tanah Merah MRT and bus 5 from Simei MRT.<br>If you are driving, you can park in SUTD's basement carpark."],
+        faq7: ['What should I bring to the event?', 'Please bring your computers. We are in the process of securing graphics-ready workstations for development and they should be available at the event! Should you expect to use additional prototyping materials, such as Arduinos, electronics and fabrication materials, do bring your own, or let us know before the event and we might be able to help.'],
+        faq8: ['How do we handle Intellectual Property (IP)?', 'Please refer to the Terms and Conditions of the Competition with regards to IP. You can download the Terms and Conditions <a href="http://bit.ly/wth2018tnc" target="_blank"> here.'],
+        faq9: ['Is this hackathon free?', 'Yes, this hackathon is completely free. Come down and have fun, you never know what your ideas might turn into!'],
+        faq10: ['Can I start ideating before the competition?', 'Yes, you can begin conceptualizing your ideas or planning your approach to the themes before the competition. However only work done on the prototype during the competition itself will be judged.'],
         faq11: ["My question can't be found in the the FAQs! Who should I contact?", "For any queries or clarification, please feel free to drop us a email at <a href='mailto:queries@sutdwth.com?Subject='Queries about What The Hack''>queries@sutdwth.com</a>."]
       },
       arrowMainColor: '#ff7bac',
@@ -72,7 +72,7 @@ export default {
       }
       setTimeout(function() {
         self.$refs.answer[answer_id].hidden = !self.$refs.answer[answer_id].hidden;
-      }, 400);
+      }, 100);
     }
   },
   mounted: function() {
@@ -97,7 +97,7 @@ export default {
 
   .faq-title {
     font-family: 'Quicksand', sans-serif;
-    font-size: 3.5vw;
+    font-size: 2.5vw;
     text-align: center;
     padding: 0;
     color: #ff7bac;
@@ -115,7 +115,7 @@ export default {
     box-shadow: 0 1.2vw #ffa6c7;
     border-radius: 6vw;
     padding: 4.5vw 1.2vw;
-    font-size: 1.7vw;
+    font-size: 1.3vw;
   }
 
   .question__container {
@@ -123,6 +123,7 @@ export default {
     vertical-align: middle;
     border-radius: 1.5vw;
     margin: 1vw 0;
+    transition: background-color 0.3s;
   }
 
   .question__container:hover,
@@ -135,13 +136,13 @@ export default {
   .question {
     display: inline-block;
     margin: 1.5vw 2vw;
-    width: calc(100% - 12vw);
+    width: calc(100% - 10vw);
   }
 
   .arrow {
     display: inline-block;
-    width: 4vw;
-    transition: transform 0.5s ease-in-out;
+    width: 2vw;
+    transition: transform 0.3s ease-in-out;
   }
 
   .arrow svg{
@@ -151,7 +152,10 @@ export default {
   }
 
   .answer {
-   margin: 1.5vw 2vw;
+    font-size: 1vw;
+    margin: 1.5vw 2vw;
+    border-left: 0.5vw solid #ffa6c7;
+    padding-left: 1vw;
   }
 
   .rotate {
@@ -182,6 +186,13 @@ export default {
     .question__container {
       border-radius: 0.5rem;
       margin: 0.5rem 0;
+    }
+
+    .answer {
+      font-size: 1rem;
+      margin: 1.5rem 0.5rem;
+      border-left: 0.3rem solid #ffa6c7;
+      padding-left: 0.75rem;
     }
   }
   

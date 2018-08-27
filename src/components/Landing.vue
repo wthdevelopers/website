@@ -36,10 +36,9 @@
   <div class="main-logo">
     <Logo></Logo>
   </div>
-  <div class="theme">virtual // reality</div>
+  <div class="theme">Immersive Realities Edition</div>
     <ul class="theme__items">
-      <li class="theme__item">29 September - 30 September</li>
-      <li class="theme__item">Singapore University of Technology and Design</li>
+      <li class="theme__item">29 - 30 September 2018<br>Singapore University of Technology and Design</li>
       <li class="theme__item theme__item--register">
         <a href="https://tinyurl.com/sutdwthregister2018" target="_blank">Register</a>
       </li>
@@ -201,9 +200,15 @@ export default {
 }
 
 .nav__item a {
-  font-size: 2.5vw;
+  font-size: 1.25vw;
   text-decoration: none;
   color: white;
+  border-bottom: 3px solid transparent;
+  transition: border-bottom 0.3s;
+}
+
+.nav__item a:hover {
+  border-bottom: 3px solid white;
 }
 
 .mobile-nav__item a {
@@ -217,12 +222,14 @@ export default {
   background: #ff7bac;
   padding: 0.5vw 1.5vw;
   border-radius: 2.5vw;
+  transition: background 0.3s;
 }
 
 .nav__item--register a:hover,
 .nav__item--register a:active {
   color: #ff7bac;
   background: white;
+  border-bottom: 3px solid transparent;
 }
 
 .main-logo {
@@ -241,7 +248,7 @@ export default {
 .theme {
   font-family: 'Nunito', sans-serif;
   color: white;
-  font-size: 2.5vw;
+  font-size: 2.7vw;
   font-weight: bolder;
   position: relative;
   top: calc((100% - 8vw)/3);
@@ -254,7 +261,7 @@ export default {
   padding: 0;
   list-style: none;
   font-family: 'Nunito', sans-serif;
-  font-size: 1.5vw;
+  font-size: 1.1vw;
   font-weight: bold;
   color: white;
   position: relative;
@@ -268,7 +275,7 @@ export default {
 }
 
 .theme__item--register {
-  margin: 1.5vw 0;
+  margin: 2vw 0;
 }
 
 .theme__item--register a {
@@ -278,6 +285,7 @@ export default {
   padding: 0.5vw 3vw;
   border-radius: 2vw;
   text-decoration: none;
+  transition: background 0.3s;
 }
 
 .theme__item--register a:hover,x
