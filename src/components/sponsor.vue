@@ -12,8 +12,8 @@
     <div class="gold">
       <h2>Gold Tier</h2>
       <div class="parent">
-        <div class="sponsor round shadow" v-for="gold in golds" :style="addRatio(gold.hfactor, gold.wfactor)">
-          <img :src="imgPath(gold.image)" class="sponsor__image"></img>
+        <div class="sponsor round shadow" v-for="gold in golds" >
+          <img :src="imgPath(gold.image)" class="sponsor__image" :style="addRatio(gold.hfactor, gold.wfactor)"></img>
         </div>
       </div>
     </div>
@@ -37,25 +37,32 @@ export default {
       return require('@/assets/' + imgName)
     },
     addRatio: function(hfactor, wfactor) {
-      if (window.screen.width >= 320 && window.screen.width <= 480) {
+      if (hfactor !== 1 || wfactor !== 1) {
         return {
-          'height': 'calc(100px * ' + hfactor + ')',
-          'width': 'calc(100px * ' + wfactor + ')'
+          'height': 'calc(100% * ' + hfactor + ')',
+          'width': 'calc(100% * ' + wfactor + ')',
+          'margin': 'calc((100% - (100% * ' + hfactor + ')) / 2) 0'
         }
       }
-      else if (window.screen.width >= 768 && window.screen.width <= 800) {
-        return {
-          'height': 'calc(200px * ' + hfactor + ')',
-          'width': 'calc(200px * ' + wfactor + ')'
-        }
-      }
-      else {
-        return {
-          'height': 'calc(23vw * ' + hfactor + ')',
-          'width': 'calc(23vw * ' + wfactor + ')'
-        }
 
-      }
+      // if (window.screen.width >= 320 && window.screen.width <= 480) {
+      //   return {
+      //     'height': 'calc(100px * ' + hfactor + ')',
+      //     'width': 'calc(100px * ' + wfactor + ')'
+      //   }
+      // }
+      // else if (window.screen.width >= 768 && window.screen.width <= 800) {
+      //   return {
+      //     'height': 'calc(200px * ' + hfactor + ')',
+      //     'width': 'calc(200px * ' + wfactor + ')'
+      //   }
+      // }
+      // else {
+      //   return {
+      //     'height': 'calc(23vw * ' + hfactor + ')',
+      //     'width': 'calc(23vw * ' + wfactor + ')'
+      //   }
+      // }
     }
   }
 }
@@ -102,6 +109,7 @@ h2 {
   background-color: #dbebff;
   display: inline-block;
   padding: 3.5vw;
+  vertical-align: middle;
 }
 
 .round {

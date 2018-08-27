@@ -141,8 +141,13 @@ export default {
             },
             gold2: {
               image: 'AMD_logo.png',
+              hfactor: 0.3,
+              wfactor: 1
+            },
+            gold3: {
+              image: 'IMDA_Logo.svg',
               hfactor: 1,
-              wfactor: 2.2
+              wfactor: 1
             }
           },
           silver: {
