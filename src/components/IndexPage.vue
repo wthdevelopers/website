@@ -112,27 +112,27 @@ export default {
           prize1: {
             image: 'best_overall.svg',
             category: 'Best<br>Overall Hack',
-            amount: 'S$1000'
+            amount: 'S$1000 cash, and<br>3x AMD RX580 Graphics Cards'
           },
           prize2: {
             image: 'best_vr.svg',
             category: 'Best<br>VR Hack',
-            amount: 'Trip to Shanghai,<br>Tickets to<br>Global VR Hackathon,<br>and S$250'
+            amount: 'Trip to Shanghai,<br>Tickets to Global VR Hackathon,<br>and 2x AMD RX580 Graphics Cards'
           },
           prize3: {
             image: 'education.svg',
             category: 'Best<br>Education',
-            amount: 'S$250'
+            amount: 'S$250 cash'
           },
           prize4: {
             image: 'art_design.svg',
             category: 'Best<br>Design and Art',
-            amount: 'S$250'
+            amount: 'S$250 cash'
           },
           prize5: {
             image: 'smart_cities.svg',
             category: 'Best<br>Smart Cities',
-            amount: 'S$250'
+            amount: 'S$250 cash'
           }
         },
         sponsors: {
