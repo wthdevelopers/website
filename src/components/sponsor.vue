@@ -1,30 +1,30 @@
 <template>
   <div class="sponsors">
     <h1 id="h1b">Sponsors</h1>
-    <div class="platinum">
+<!--     <div class="platinum">
       <h2>Platinum Tier</h2>
       <div class="parent">
         <div class="sponsor round shadow" v-for="platinium in platiniums">
           <img :src="imgPath(platinium.image)" class="sponsor__image"></img>
         </div>
       </div>
-    </div>
+    </div> -->
     <div class="gold">
-      <h2>Gold Tier</h2>
+<!--       <h2>Gold Tier</h2> -->
       <div class="parent">
         <div class="sponsor round shadow" v-for="gold in golds" >
           <img :src="imgPath(gold.image)" class="sponsor__image" :style="addRatio(gold.hfactor, gold.wfactor)"></img>
         </div>
       </div>
     </div>
-    <div class="sliver">
+<!--     <div class="sliver">
       <h2>Silver Tier</h2>
       <div class="parent">
         <div class="sponsor round shadow" v-for="silver in silvers">
           <img :src="imgPath(silver.image)" class="sponsor__image"></img>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -75,7 +75,7 @@ export default {
 @import url("https://fonts.googleapis.com/css?family=Nunito");
 
 h1 {
-  font-size: 3.5vw;
+  font-size: 2.5vw;
   font-family: 'Quicksand', sans-serif;
   margin: 0 auto;
   background: white;

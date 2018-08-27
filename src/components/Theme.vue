@@ -6,6 +6,7 @@
         <li class="theme" v-for="theme in themes">
           <img :src="imgPath(theme.image)" class="theme__image"></img>
           <p class="theme-category">{{ theme.theme }}</p>
+          <p class="theme-desc">{{ theme.desc }}</p>
         </li>
       </ul>
     </div>
@@ -37,7 +38,7 @@ export default {
 
 .section-title {
   font-family: 'Quicksand', sans-serif;
-  font-size: 3.5vw;
+  font-size: 2.5vw;
   margin: 0 auto;
   margin-bottom: 1.2vw;
   color: #ff7bac;
@@ -73,17 +74,22 @@ export default {
 }
 
 .theme__image {
-  height: 8.5vw;
-  width: 8.5vw;
+  height: 4.5vw;
+  width: 4.5vw;
   margin: auto;
 }
 
 .theme-category {
   text-align: center;
-  font-size: 1.7vw;
+  font-size: 1.4vw;
   font-weight: bold;
   color: black;
-  margin: 1.2vw auto;
+  margin: 1vw auto;
+}
+
+.theme-desc {
+  text-align: center;
+  font-size: 1.1vw;
 }
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
@@ -113,8 +119,8 @@ export default {
   }
 
   .theme__image {
-    height: 120px;
-    width: 120px;
+    height: 80px;
+    width: 80px;
   }
 
   .theme-category {
@@ -122,6 +128,12 @@ export default {
     margin-bottom: 1.5rem;
     font-size: 1.1rem;
   }
+
+  .theme-desc {
+    text-align: center;
+    font-size: 0.8rem;
+  }
+
 }
 
 @media only screen and (min-device-width:768px) and (max-device-width:800px) {
@@ -159,5 +171,11 @@ export default {
     font-size: 2rem;
     margin: 1.5rem 0;
   }
+
+  .theme-desc {
+    text-align: center;
+    font-size: 1.2rem;
+  }
+
 }
 </style>

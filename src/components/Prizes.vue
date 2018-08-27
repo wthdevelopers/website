@@ -2,6 +2,9 @@
   <section class="prizes">
     <h1 class="section-title">Prizes</h1>
     <div class="prize__container">
+      <div class="prize__note">
+        Winning a prize in one category <strong>does not</strong> exclude you from winning a prize in another!
+      </div>
       <ul class="prize__list">
         <li class="prize" v-for="prize in prizes">
           <img :src="imgPath(prize.image)" class="prize__image"></img>
@@ -36,7 +39,7 @@ export default {
 
 .section-title {
   font-family: 'Quicksand', sans-serif;
-  font-size: 3.5vw;
+  font-size: 2.5vw;
   margin: 0 auto;
   color: #ff7bac;
   text-align: center;
@@ -51,7 +54,7 @@ export default {
   background-color: #ffebf1;
   box-shadow: 0 1.2vw #ffa6c7;
   border-radius: 6vw;
-  padding: 4.5vw 1.2vw;
+  padding: 2.5vw 2.2vw;
 }
 
 .prize__list {
@@ -63,6 +66,12 @@ export default {
   justify-content: space-around;
 }
 
+.prize__note {
+  font-size: 1vw;
+  margin-bottom: 3vw;
+  text-align: center;
+}
+
 .prize {
   width: 16.5vw;
   display: inline-block;
@@ -70,8 +79,8 @@ export default {
 }
 
 .prize__image {
-  height: 8.5vw;
-  width: 8.5vw;
+  height: 4.5vw;
+  width: 4.5vw;
   margin: auto;
 }
 
@@ -85,8 +94,9 @@ export default {
 .prize-amount {
   text-align: center;
   color: black;
+  font-weight: normal;
   margin: 0.6vw 0;
-  font-size: 1.5vw;
+  font-size: 1vw;
 }
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
@@ -111,14 +121,20 @@ export default {
     display: block;
   }
 
+  .prize__note {
+    font-size: 1rem;
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+
   .prize {
     width: 49%;
     margin: auto;
   }
 
   .prize__image {
-    height: 120px;
-    width: 120px;
+    height: 80px;
+    width: 80px;
   }
 
   .prize-category {
@@ -153,6 +169,12 @@ export default {
 
   .prize__list {
     display: block;
+  }
+
+  .prize__note {
+    font-size: 1vw;
+    margin-bottom: 3vw;
+    text-align: center;
   }
 
   .prize {

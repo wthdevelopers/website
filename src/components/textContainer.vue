@@ -63,7 +63,7 @@ export default {
 
 .text__container--title{
   font-family: 'Quicksand', sans-serif;
-  font-size: 3.5vw;
+  font-size: 2.5vw;
   text-align: center;
   color: #ff7bac;
   margin: 0 auto;
@@ -74,8 +74,8 @@ export default {
 
 .text__container--content {
   font-family: 'Nunito', sans-serif;
-  font-size: 1.7vw;
-  text-align: justify;
+  font-size: 1.25vw;
+  text-align: center;
   padding: 1.8vw;
   background-color: #fcfcfc;
   box-shadow: 0.8vw 1.2vw #d6d6d6;
@@ -87,7 +87,6 @@ export default {
   .text__container {
     background-color: #fcfcfc;
     border-radius: 1.5rem;
-    box-shadow: -0.3rem 0.5rem #d6d6d6;
     padding: 1.5rem 0.8rem;
     width: 100%;
   }
@@ -100,11 +99,12 @@ export default {
   }
 
   .text__container--content {
+    text-align: left;
     font-size: 1rem;
     background-color: unset;
-    border-radius: unset;
+    border-radius: 1.5rem;
     box-shadow: unset;
-    padding: 0.5rem 0 0 0;
+    padding: 2.5rem 2.5rem 1.5rem 1.5rem;
   }
 }
 
@@ -118,7 +118,6 @@ export default {
   .text__container--content {
     padding: 3rem 1.5rem;
     font-size: 1.8rem;
-    box-shadow: 0.5rem 1rem #d6d6d6;
     border-radius: 4rem;
   }
 }

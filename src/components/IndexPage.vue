@@ -78,55 +78,60 @@ export default {
         },
         content1: {
           title: 'What The Hack?',
-          content: '<strong>What The Hack</strong> @ SUTD is a 24 Hour hackathon that aims to bring together people of multiple disciplines\
-                    and provide them with the resources to jumpstart their ideas.<br><br>\
+          content: '<strong>What The Hack</strong> @ SUTD is a 24-hour hackathon that aims to bring together people of multiple disciplines\
+                    and provide them with the opportunity and resources to jumpstart their ideas.<br><br>\
                     <strong>Come solo or come as a team!</strong><br>\
-                    Gather your fellow hackers into a team or come down and form teams on the day itself! Your team can have a <strong>maximum of 4 members</strong>.\
+                    Gather your fellow hackers into a team, or form teams on the day itself! Your team can have a <strong>maximum of 4 members</strong>.\
                     Alternatively, you can go at the themes solo too! Who knows? You might be able to win a prize all by yourself!<br><br>'
         },
         content2: {
-          title: 'virtual // reality',
-          content: 'This year’s theme is virtual reality but by no means are you restricted solely to VR and AR hacks!\
-                    The theme is divided into three categories, each with its own prize!'
+          title: 'Immersive Realities',
+          content: "This year’s theme is <b><i>Immersive Realities</i></b>, an umbrella term for AR, VR, and MR<sup>#</sup>, and even more! While purists may use the term Extended Reality, we extend our scope to include realities that aren't strictly defined by these categories, so by no means are you restricted solely to VR and AR hacks!\
+                    The theme is divided into three categories, each with its own prize!\
+                    <br><br>\
+                    <small><sup>#</sup> Augmented, Virtual and Mixed Realities</small>"
         },
         themes: {
           theme1: {
             image: 'education.svg',
-            theme: 'EDUCATION'
+            theme: 'Education',
+            desc: 'Change the nature of learning as you inform, educate, and entertain using new forms of reality.'
           },
           theme2: {
             image: 'art_design.svg',
-            theme: 'ART & DESIGN'
+            theme: 'Design and Art',
+            desc: 'Blur the line between reality and fantasy by building imaginary worlds and creating spectacular visual art.'
           },
           theme3: {
             image: 'smart_cities.svg',
-            theme: 'SMART CITIES'
+            theme: 'Smart Cities',
+            desc: 'Mastermind and architect liveable space by simulating your grand plan of tomorrow’s cities.'
           }
         },
         prizes: {
           prize1: {
             image: 'best_overall.svg',
-            category: 'BEST<br>OVERALL HACK',
+            category: 'Best<br>Overall Hack',
             amount: 'S$1000'
           },
           prize2: {
             image: 'best_vr.svg',
-            category: 'BEST<br>VR HACK',
-            amount: 'Trip to Shanghai<br>(Flight & Accomodation)<br>+<br>S$250'
+            category: 'Best<br>VR Hack',
+            amount: 'Trip to Shanghai,<br>Tickets to<br>Global VR Hackathon,<br>and S$250'
           },
           prize3: {
             image: 'education.svg',
-            category: 'BEST<br>EDUCATION',
+            category: 'Best<br>Education',
             amount: 'S$250'
           },
           prize4: {
             image: 'art_design.svg',
-            category: 'BEST<br>ART & DESIGN',
+            category: 'Best<br>Design and Art',
             amount: 'S$250'
           },
           prize5: {
             image: 'smart_cities.svg',
-            category: 'BEST<br>SMART CITIES',
+            category: 'Best<br>Smart Cities',
             amount: 'S$250'
           }
         },
@@ -141,7 +146,7 @@ export default {
             },
             gold2: {
               image: 'AMD_logo.png',
-              hfactor: 0.3,
+              hfactor: 0.24,
               wfactor: 1
             },
             gold3: {
@@ -160,9 +165,9 @@ export default {
       this.content1.content = this.content1.content + 
                               '<strong>What you get out of What The Hack:</strong><br>\
                               <ul>\
-                              <li>Bring crazy ideas to life</li>\
-                              <li>Experience VR</li>\
-                              <li>Network with our sponsors!</li>\
+                              <li>Stand to win attractive prizes!</li>\
+                              <li>Prototype your very own VR experience!</li>\
+                              <li>Network with our sponsors from the industry!</li>\
                               </ul>'
     }
   }

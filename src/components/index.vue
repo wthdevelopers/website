@@ -6,11 +6,11 @@
         <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3988.724908687625!2d103.96194377917459!3d1.3414140115758566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1ssutd!5e0!3m2!1sen!2ssg!4v1525927478994" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
     </div>
     <div class="direction">
-      <p>We are at 8 Somapah Road, Singapore 487372.</p>
-      <p>By Train</br>
-        Alight at Upper Changi MRT Station (DT34) and take Exit B – our campus will be on your left when you exit the station
+      <p>We are at <strong>8 Somapah Road, Singapore 487372</strong>.</p>
+      <p><strong>By Train</strong></br>
+        Alight at <span class="mrt">Upper Changi MRT Station (DT34)</span> and take Exit B – our campus will be on your left when you exit the station
       </p>
-      <p>By Bus</br>
+      <p><strong>By Bus</strong></br>
         Alight at one of the bus stops along Somapah Road and walk to our Campus. Buses available:
         <br>2, 5, 20, 24
       </p>
@@ -39,7 +39,7 @@ export default {
 @import url("https://fonts.googleapis.com/css?family=Nunito");
 
 h1 {
-  font-size: 3.5vw;
+  font-size: 2.5vw;
   font-family: 'Quicksand', sans-serif;
   margin: 0 auto;
   background: white;
@@ -62,7 +62,7 @@ h1 {
 p {
   margin: 0;
   margin-bottom: 1.2vw;
-  font-size: 2vw;
+  font-size: 1vw;
   font-family: 'Nunito', sans-serif;
 }
 
@@ -76,9 +76,24 @@ a {
   color: #6eadff;
 }
 
+a:hover{
+  background:#ff7bac;
+  color: #fff;
+  padding: 0 0.5vw 0 0.5vw;
+  border-radius: 2vw;
+}
+
 footer {
-  font-size: 1.8vw;
+  font-size: 1.2vw;
   font-family: 'Nunito', sans-serif;
+}
+
+.mrt {
+  background:#0c5589;
+  color: #fff;
+  padding: 0 0.5vw 0 0.5vw;
+  border-radius: 2vw; 
+  white-space: nowrap;
 }
 
 .index {
@@ -99,6 +114,7 @@ footer {
   width: 49%;
   margin: 0 auto;
   display: inline-block;
+  border-radius: 2vw;
 }
 
 .direction {
@@ -147,7 +163,7 @@ footer {
   p {
     margin: 0;
     margin-bottom: 1rem;
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   #h1b {
@@ -196,7 +212,7 @@ footer {
   p {
     margin: 0;
     margin-bottom: 1rem;
-    font-size: 2rem;
+    font-size: 1rem;
   }
 
   #h1b {

@@ -25,13 +25,13 @@ export default {
     return {
       titles: [ 'Day', 'Timing', 'Activity' ],
       table: {
-        schedule1: [ 'Sat', '0900 - 1000', 'Registration' ],
-        schedule2: [ 'Sat', '1000 - 1100', 'Briefing' ],
-        schedule3: [ 'Sun/Sat', '1100 - 1100', 'Hacking' ],
-        schedule4: [ 'Sun', '1100 - 1300', 'Exhibition Setup' ],
-        schedule5: [ 'Sun', '1300 - 1400', 'Lunch' ],
-        schedule6: [ 'Sun', '1400 - 1600', 'Judging' ],
-        schedule7: [ 'Sun', '1600 - 1700', 'Prize Presentation' ]
+        schedule1: [ 'Sat', '0900-1000', 'Registration' ],
+        schedule2: [ 'Sat', '1000-1100', 'Briefing' ],
+        schedule3: [ 'Sun/Sat', '1100-1100', 'Hacking' ],
+        schedule4: [ 'Sun', '1100-1300', 'Exhibition Setup' ],
+        schedule5: [ 'Sun', '1300-1400', 'Lunch' ],
+        schedule6: [ 'Sun', '1400-1600', 'Judging' ],
+        schedule7: [ 'Sun', '1600-1700', 'Prize Presentation' ]
       }
     }
   },
@@ -61,7 +61,7 @@ export default {
 
   .table__title {
     font-family: 'Quicksand', sans-serif;
-    font-size: 3.5vw;
+    font-size: 2.5vw;
     text-align: center;
     margin: 0 auto;
     padding: 0;
@@ -81,7 +81,7 @@ export default {
     border-collapse: collapse;
     box-shadow: -1.2vw 1.2vw #a3d6f3;
     text-align: left;
-    font-size: 1.7vw;
+    font-size: 1.2vw;
     margin: 0;
   }
 
@@ -150,7 +150,7 @@ export default {
 
     .table__container {
       box-shadow: 0 0.8rem #a3d6f3;
-      font-size: 1.2rem;
+      font-size: 0.8rem;
       border-radius: 4rem;
     }
       
@@ -178,8 +178,8 @@ export default {
     }
 
     th:nth-child(2) {
-      padding-left: 1rem;
-      padding-right: 1rem;
+      padding-left: 1.1rem;
+      padding-right: 1.1rem;
     }
 
     td {
@@ -191,8 +191,8 @@ export default {
     }
     
     td:nth-child(2) {
-      padding-left: 1rem;
-      padding-right: 1rem;
+      padding-left: 1.1rem;
+      padding-right: 1.1rem;
     }
 }
 
