@@ -163,7 +163,7 @@ export default {
 
   .prize__container {
     border-radius: 6rem;
-    padding: 3rem 1rem;
+    padding: 5rem 1rem;
     box-shadow: 0 1.2rem #ffa6c7;
   }
 
@@ -172,7 +172,7 @@ export default {
   }
 
   .prize__note {
-    font-size: 1vw;
+    font-size: 1.8rem;
     margin-bottom: 3vw;
     text-align: center;
   }

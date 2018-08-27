@@ -62,7 +62,7 @@ h1 {
 p {
   margin: 0;
   margin-bottom: 1.2vw;
-  font-size: 1vw;
+  font-size: 1.3vw;
   font-family: 'Nunito', sans-serif;
 }
 
@@ -143,7 +143,7 @@ footer {
   #h1a {
     font-size: 2rem;
     margin-bottom: 0.5rem;
-    width: 65%;
+    width: 100%;
   }
 
   .map {
@@ -212,7 +212,7 @@ footer {
   p {
     margin: 0;
     margin-bottom: 1rem;
-    font-size: 1rem;
+    font-size: 1.8rem;
   }
 
   #h1b {

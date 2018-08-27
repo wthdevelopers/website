@@ -44,25 +44,6 @@ export default {
           'margin': 'calc((100% - (100% * ' + hfactor + ')) / 2) 0'
         }
       }
-
-      // if (window.screen.width >= 320 && window.screen.width <= 480) {
-      //   return {
-      //     'height': 'calc(100px * ' + hfactor + ')',
-      //     'width': 'calc(100px * ' + wfactor + ')'
-      //   }
-      // }
-      // else if (window.screen.width >= 768 && window.screen.width <= 800) {
-      //   return {
-      //     'height': 'calc(200px * ' + hfactor + ')',
-      //     'width': 'calc(200px * ' + wfactor + ')'
-      //   }
-      // }
-      // else {
-      //   return {
-      //     'height': 'calc(23vw * ' + hfactor + ')',
-      //     'width': 'calc(23vw * ' + wfactor + ')'
-      //   }
-      // }
     }
   }
 }

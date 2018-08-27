@@ -102,9 +102,9 @@ export default {
     text-align: left;
     font-size: 1rem;
     background-color: unset;
-    border-radius: 1.5rem;
+    border-radius: unset;
     box-shadow: unset;
-    padding: 2.5rem 2.5rem 1.5rem 1.5rem;
+    padding: 0.5rem 0 0 0;
   }
 }
 
