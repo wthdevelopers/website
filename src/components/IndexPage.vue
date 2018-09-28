@@ -112,12 +112,12 @@ export default {
           prize1: {
             image: 'best_overall.svg',
             category: 'Best<br>Overall Hack',
-            amount: 'S$1000 cash, and<br>3x AMD RX580 Graphics Cards'
+            amount: 'S$1000 cash, and<br>4x AMD RX480 Graphics Cards'
           },
           prize2: {
             image: 'best_vr.svg',
             category: 'Best<br>VR Hack',
-            amount: 'Trip to Shanghai,<br>Tickets to Global VR Hackathon,<br>and 2x AMD RX580 Graphics Cards'
+            amount: 'Trip to Shanghai,<br>Tickets to Global VR Hackathon,<br>and 2x AMD RX480 Graphics Cards'
           },
           prize3: {
             image: 'education.svg',
